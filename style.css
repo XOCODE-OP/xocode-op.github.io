@@ -509,6 +509,15 @@ a, a:visited{
     display: table-cell;
 }
 
+.exp_table-location
+{
+    color: green;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+
+
 
 
 
