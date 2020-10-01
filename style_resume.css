@@ -1,19 +1,20 @@
 .content-page[data-pageid='resume']
 {
-    background-color: rgb(204, 204, 204);
+    /* background-color: rgb(204, 204, 204); */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     display: flex;
     font-size: 24px;
+    color: black;
 }
 
 .resume-container
 {
     max-width: 820px;
     background-color: white;
-    border-left: 1px solid #333;
-    border-right: 1px solid #333;
+    /* border-left: 1px solid rgb(117, 187, 253);
+    border-right: 1px solid rgb(117, 187, 253); */
     position: absolute;
     top: 30px;
     margin-bottom: 30px;
