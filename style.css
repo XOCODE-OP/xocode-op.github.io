@@ -745,7 +745,12 @@ a, a:visited{
 {
     .focus_project-flex
     {
-        width: 100%
+        width: 90%
+    }
+
+    .focus_project
+    {
+        top: 10%;
     }
 }
 

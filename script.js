@@ -204,41 +204,37 @@ $( document ).ready(function()
             let slide_two = $(".focus_project-slider_slide-2");
 
             if (obj.bigimg)
-            {
                 slide_one.html("<a href='img/project-big/"+obj.bigimg+"' target='_blank'><div class='slide-img' style='background-image: url(img/project-big/"+obj.bigimg+")' /></div></a>");
-            }
             else
-            {
                 slide_one.html("<div class='slide-img' style='background-image: url(img/project-big/missing.jpg)' /></div>");
-            }
 
             if (obj.video) 
-            {
                 slide_two.html("<iframe src='"+obj.video+"' frameborder='0' allowfullscreen></iframe>");
-            }
             else if (obj.bigimg2)
-            {
                 slide_two.html("<a href='img/project-big/"+obj.bigimg2+"' target='_blank'><div class='slide-img' style='background-image: url(img/project-big/"+obj.bigimg2+")' /></div></a>");
-            }
             else
-            {
                 slide_two.html("<div class='slide-img' style='background-image: url(img/project-big/missing.jpg)' /></div>");
-            }
 
-            let slidew = $(".focus_project").width() * 0.5;
+            let wfac = ("" + $(".focus_project-flex").css("width")).split("%")[0];
+            wfac = parseInt(wfac) / 100.0;
+
+            let slidew = $(".focus_project").width() * wfac;
+            console.log(slidew);
             slide_one.css("left", "0px");
             slide_two.css("left", slidew + "px");
 
             let slider_arrow_prev = $(".focus_project-slider_prev");
             let slider_arrow_next = $(".focus_project-slider_next");
 
-            slider_arrow_prev.click(function() {
+            slider_arrow_prev.click(function()
+            {
                 slide_one.animate({left: "0px"}, PAGE_ANIMATION_DURATION/8);
                 slide_two.animate({left: slidew+"px"}, PAGE_ANIMATION_DURATION/8);
                 slider_arrow_prev.hide();
                 slider_arrow_next.show();
             });
-            slider_arrow_next.click(function() {
+            slider_arrow_next.click(function()
+            {
                 slide_one.animate({left: "-"+slidew+"px"}, PAGE_ANIMATION_DURATION/8);
                 slide_two.animate({left: "0px"}, PAGE_ANIMATION_DURATION/8);
                 slider_arrow_prev.show();
