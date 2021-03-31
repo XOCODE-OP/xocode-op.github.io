@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3.3.1.min.js" ></script>
+        <script src="faker.min.js" ></script>
+        <script src="sample-data-gen.js" ></script>
+        <script src='pagescript.js'></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <meta charset="UTF-8">
+        <title>sample-data-gen for testing</title>
+    </head>
+    <body>
+
+        <div class="header">Data Mockr 2.0</div>
+        
+        <div class='container'>
+            
+            
+            <section>
+                <p>
+                    <section style="display: flex; justify-content: space-evenly;">
+                        <div class='checkbox-cont'>
+                            <input type='checkbox' id='labelcheck' name='labelcheck'><label for='labelcheck'>Use labels/identifiers</label>
+                        </div>
+                        <button id='addfield'>+ Add Data Field</button>
+                    </section>
+                </p>
+                <div class='list-of-fields'>
+                    <div class="q-input-cont" >
+                        <div class='text-cont' data-type='label' data-active='false'>
+                            <input name='txt_label' type='text' />
+                            <span class='coverlabel'>Name / Label / Identifier</span>
+                        </div>
+                        <div class='text-cont' data-type='output'>
+                            <input name='output' type='text' />
+                            <span class='coverlabel'>Output</span>
+                        </div>
+                        <button class='refresh_button'></button>
+                        <select class="gen_data_select">
+                            <option value='NONE'>[CHOOSE DATA TYPE]</option>
+                            <option value='fullname'>Full Name</option>
+                            <option value='lastname'>Last Name</option>
+                            <option value='firstname'>First Name</option>
+                            <option value='digit'>Single Digit</option>
+                            <option value='digits'>Digits</option>
+                            <option value='inc_id'>Incrementing ID</option>
+                            <option value='job'>Job</option>
+                            <option value='honorific'>Honorific</option>
+                            <option value='sentence'>Sentence</option>
+                            <option value='paragraph'>Text Paragraph</option>
+                            <option value='boolean'>Boolean</option>
+                            <option value='allspecialchars'>All & Special Characters</option>
+                            <option value='lowchars'>Lower Case Letters</option>
+                            <option value='upperchars'>Upper Case Letters</option>
+                            <option value='lowernumberchars'>Lower Case Letters & Numbers</option>
+                            <option value='uppernumberchars'>Upper Case Letters & Numbers</option>
+                            <option value='upperlowernumberchars'>Upper, Lower Case Letters & Numbers</option>
+                            <option value='lowernumberspecialchars'>Lower Case Letters and Special Characters</option>
+                            <option value='uppernumberspecialchars'>Upper Case Letters and Special Characters</option>
+                            <option value='decimal'>Decimal</option>
+                            <option value='fraction'>Fraction</option>
+                            <option value='unixtime'>Unix Time</option>
+                            <option value='email'>Email</option>
+                            <option value='nickname'>Nick Name</option>
+                            <option value='url'>URL</option>
+                            <option value='ipv4'>IP Address</option>
+                            <option value='useragent'>User Agent</option>
+                            <option value='hexcolor'>Color in Hexadecimal</option>
+                            <option value='macaddress'>MAC Address</option>
+                            <option value='uuid'>UUID</option>
+                            <option value='phonenumber'>Phone Number</option>
+                            <option value='moneyamount'>Money Amount</option>
+                            <option value='currencysymbol'>Currency Symbol</option>
+                            <option value='currencycode'>Currency Code</option>
+                            <option value='currencyname'>Currency Name</option>
+                            <option value='color'>Color</option>
+                            <option value='city'>City</option>
+                            <option value='country'>Country</option>
+                            <option value='countrycode'>Country Code</option>
+                            <option value='longitude'>Longitude</option>
+                            <option value='latitude'>Latitude</option>
+                            <option value='address'>Address</option>
+                            <option value='detailedaddress'>Detailed Address</option>
+                            <option value='month'>Name of Month</option>
+                            <option value='weekdayname'>Name of Weekday</option>
+                            <option value='operatingsystem'>Operating System</option>
+                            <option value='isp'>ISP</option>
+                            <option value='browser'>Browser</option>
+                            <option value='screensize'>Screen Size</option>
+                        </select>
+                        <button class='killfield'>X</button>
+                    </div>
+                </div>
+            </section>
+
+            <div>
+                <section class='export_section'>
+                    <h2>JSON Export</h2>
+                    <div><button class='gen_data_button' id='but_exp_dat-row'>Save</button> above shown data as JSON.</div>
+                    <div><button class='gen_data_button' id='but_exp_many-rows'>Generate & Export</button> for <input type='number' id='jsonrownum' value='0' /> rows.</div>
+                </section>
+
+                <section class='export_section'>
+                    <h2>CSV Export</h2>
+                    <div><button class='gen_data_button' id='but_exp_csv-static'>Save</button> above shown data as CSV.</div>
+                    <div><button class='gen_data_button' id='but_exp_csv-many'>Generate & Export</button> for <input type='number' id='csvtotalrows' value='0' /> rows.</div>
+                </section>
+    
+                <section class='export_section'>
+                    <h2>SQL Export<span>(needs field labels)</span></h2>
+                    <p><input type='text' id='sql_table' name='sql_table'><label for='sql_table'> Table Name</label></p>
+                    <p><input type='checkbox' id='sql_table_create' name='sql_table_create'><label for='sql_table_create'> Include table creation instruction</label></p>
+                    <div class='sqlbuttons'><button class='gen_data_button' id='but_exp_sql_shown'>Save</button> above shown data as SQL.</div>
+                    <div class='sqlbuttons' ><button class='gen_data_button' id='but_exp_sql_many-rows'>Generate & Export</button> for <input type='number' id='sqlrownum' value='0' /> rows.</div>
+                </section>
+    
+                <section id='debug' style='font-size: 9px; font-family: monospace; border: 2px dotted grey; margin-left: auto; margin-right: auto; width: 400px; height: 300px;'>
+    
+                </section>
+            </div>
+
+            
+
+        </div>
+
+            
+
+    </body>
+</html>

@@ -1,0 +1,281 @@
+
+*{
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  transition: all 250ms;
+}
+
+body
+{
+    background-color: grey;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.header
+{
+  display: block;
+  padding: 1vw 10px;
+  background-color: rgb(18, 15, 72);
+  color: #eee;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.container
+{
+    text-align: center;
+    background-color: rgb(216, 203, 162);
+    padding: 10px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.container section
+{
+    display: block;
+    margin: 30px auto;
+    margin-top: 0;
+}
+
+.q-input-cont
+{
+    transition: all 250ms;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.q-input-cont *
+{
+    margin: 0px 3px;
+}
+
+input[type='checkbox']
+{
+  width: 16px;
+  height: 16px;
+}
+
+.checkbox-cont
+{
+  border: 1px solid rgb(97, 97, 97);
+  border-radius: 4px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.checkbox-cont:hover
+{
+  background-color: rgb(199, 163, 108);
+}
+
+.checkbox-cont *
+{
+  cursor: pointer;
+}
+
+#labelcheck+label
+{
+  padding: 8px 16px;
+}
+
+.text-cont
+{
+  position: relative;
+}
+
+.q-input-cont input[type='text']
+{
+  
+  padding: 2px 4px;
+  padding-top: 16px;
+  font-size: 12px;
+  border: 1px solid rgb(123, 128, 130);
+  border-radius: 4px;
+  width: 160px;
+}
+
+.text-cont span
+{
+  background-color: transparent;
+  padding: 0 2px;
+  float: left;
+
+  font-size: 12px;
+  font-weight: 300;
+  position: absolute;
+  left: 4px;
+  top: 16px;
+}
+
+.q-input-cont input[type='text']:hover
+{
+  border-color: rgb(107, 177, 210);
+}
+
+.q-input-cont .refresh_button
+{
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAABUFBMVEVHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD6tc7/AAAAb3RSTlMAFgQXBapWFOtV9Oj8ZqkS/v3J8pATGFD6xk/56Qaw83aFyPEtuI71eRxpSisRGyVo7hrjZ+1sUvcZ7M1r+zwdqGp0pwe22njkh4zPWDkkTQ/Yud17pCiPcFGUx8xL2+DqiCbQblRZxcptTpFT2Xfb2lNsAAACO0lEQVRIx+2X118iQQzHF1yKKCC9iYAU6YK9N7Dr6VXLnV4/y5X5/98uYT3dWZbZuC/eg3mbSX6ffHcSZoIkPdvTW/3Hz1evm8uJ5u988KDvMcra6egQU5t/JkSUhs/HWJe5ChMEqfzGxXTNlZaNtO++KqG+WCZSrVnlWnU2E/Mpe/vjYu1toBP28Q8HWd+e7GwHIiJtKYExA40uwGR5AT2DboF4BSPeevVcoVYnuUBtjbG5qV7OqSjmjgvUh+HezgqWMPvCZNtVMPeibFLdwM/eMNvyayBOzZsUh5yg3tPu2vtp6iVsVE0tHcNO2u+uvQPqdX7PxtgILXURxKM8NJ4iDbw+yNhQHweNYiK4H0LtPDQaDXwXIk800GTw7xC4qYEmg+cgcEsLTQC38ReTRwVtDO4YUMc6LSpoAnhck0iDQgf33G9ewqpKOK0HcID+Z3lYnlEKFdc5nSAsM6QesWmhJekA1u9JYgVcBS1JFnjYfKsSGZwv6TXsbEtUcA+/cwPiySQRnIPGywnfxgYtdX9XHxZAPO0weS9OpEDdMnslpw3eMfFIsA/iaMWkehwf9rELwbByaO3tjMDFyJbLvdzlORYTqN1K2+qeuQOfKbYiIHdjbja93u4aK2Y+oSdREn13JNtJvlPk+rxUVAaa7JHBqS3ejVL+3V85b1L25mY/++/GwQ9fDCu2kdIf4gJpK6Fk83s6M2AqaCFW3LvED66+q2/Hj+kYi72w+XIhEW1u5YP28PNfiP/A/gJS2OX1m6CJBwAAAABJRU5ErkJggg==');
+    padding: 0 20px;
+}
+
+button
+{
+  border: 0;
+  /* background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFmSURBVEhLtZQ5TsUwFEVDQwNsANgDrIap+RINcwUNiAKWBR8KJtGxAGhomFfAIOCcKJair3zHQeZKR5Ht9/wc+9pFg8ZhC07hEd6r7wnY7/iftQiv8BPhGeahs/bhG5zkDOZgEkar7wJcgOPG7UGyXJFJH7BqR0Tr8AnGu4hWTcALuLI1OxK0AWG7Ws/EgzP4vGyl6xLM2yxbEekOA7senIYw77hsRfQEBnqQXTQF5j2UrYj0uYG6pYuMN8/8qP79D/pgoD7voiUw76hsRaQLDPQSpWoErsA8LRuV90A/JwVXCotye8fsaFP9JntTY3IRX2CBHTtStQvhLfIS6XMPUrdMV+1rcDzwBrOQLP/Ep7k+ySCOb4OT2/a7DIeQ5ETfFvdYd2lBfe7XG2t/eHtmIBQJ3IF/m009qBfIXuQABgtkLaIJbqGpiP1ZijjJsCI3kEXDitxDNjUVWYGssojb4sqZvCh+AYg7jeVmD0oaAAAAAElFTkSuQmCC'); */
+  background-size: 16px 16px;
+  font-size: 16px;
+  background-color: rgb(244, 244, 244);
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 1px solid rgb(146, 153, 156);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+button:hover
+{
+  background-color: rgb(15, 82, 228);
+  color: white;
+}
+
+button:active
+{
+  background-color: rgb(222, 224, 108);
+}
+
+.q-input-cont
+{
+    margin-top: 6px;
+}
+
+.q-input-cont select
+{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.q-input-cont input[type='text']:focus+span
+{
+  left: 4px;
+  top: 1px;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.hoverlabel-lock
+{
+  left: 4px !important;
+  top: 1px !important;
+  font-size: 12px !important;
+  font-weight: 200 !important;
+}
+
+#rownum
+{
+    font-size: 16px;
+    width: 60px;
+    margin: 3px;
+}
+
+section div
+{
+    text-align: center;
+    display: inline-block;
+}
+
+.gen_data_button
+{
+    margin-top: 10px;
+    cursor: pointer;
+
+    user-select: none;
+}
+
+.text-cont[data-type='label']
+{
+    display: none;
+}
+
+.export_section
+{
+    display: inline-block;
+    justify-content: space-around;
+    margin-top: 50px;
+    background-color: #ffffff22;
+    border: 1px solid grey;
+    border-radius: 6px;
+    padding: 10px;
+    max-width: 600px;
+    position: relative;
+    text-align: left;
+    box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.45);
+    min-height: 40px;
+}
+
+.export_section h2
+{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 24px;
+    font-weight: 300;
+    border-radius: 6px;
+    border-bottom: 1px solid grey;
+    border-left: 1px solid gray;
+    padding: 7px;
+    background-color: rgb(70, 101, 121);
+    color: #ddd;
+    text-align: right;
+}
+
+.export_section h2 span
+{
+  display: block;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.export_section div{
+  text-align: left;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAB41BMVEVHcEwmt9MzzMwlt9Mlt9Mmt9Mkt9NAv78lt9Mlt9MotdAkt9Mgv98luNMlt9Mlt9Mlt9Mlt9MluNIcqsYlt9Mlt9Mlt9Mlt9MiutYlt9Int9Elt9MmttIovNcmt9MetNIkuNIkuNMjuNUluNMlt9Mlt9MjuNQkt9MluNMjudMkttMlt9Mmt9Umt9Qlt9IluNMlt9MkuNMlt9Qlt9MmudImttQlt9Mlt9Mkt9Ikt9Mlt9MkttMlttQlt9Mlt9Mlt9Mkt9MlttQlttMlt9Mkt9Ilt9Mlt9MludMAqqomuNImttQkttImt9Elt9MmuNQkt9ImuNEnttQkt9MjudIkuNUluNImt9IluNQkttUkttsruNUgr88mt9Mlt9P///9uz+L6/f4ouNTw+vz2/P2v5e/f9Pj8/v7e9Pgmt9O+6vL+//8+v9iS2+kvutX5/f7Y8vfX8vdWx91Kw9pfyt+E1ubK7fR10uPH7PS76fE8v9ih4OxszuH7/v6o4u2u5O+L2ejU8fbB6vJTxty66PE2vdY4vdc3vddiy9981OXn9/oqudQyu9b9/v+r4+7q+Ps/v9hXyN0puNTf9flgyt8wu9X3/P3B6/PE7PP4/f47vtdqzuFnzeCQ2ulhy98sudQrudTg9fncjBLDAAAAXXRSTlMA7gXQ/YDLBP78JtIIz/Cnzft9Ccb5990lzifKUBNREU9WJITRmEFA7zppkjxfZ5b4Xd/eKF7J8pRc8YWCUuPi4KXhpFXcx0UDRGU/Q9VkOT07YzMryGZTVAcSEMwL1N3nAAACg0lEQVRYw7WX51vbMBDGbWLHzg6hgYRACLvsVTYU6N57t1KbTtoC3XvQvffe7Z9aNyl4SfLJeXi/6bm8vyeSTuc7QVgoVablSHRMVFVxLBqR05V87iXDIQmZJCVry6HuorY+RNTOXgVib+5GVPW0OyK2BBBTda1Me0m9ihykdgTp/nIPAmjjDpp/Qz8CaaiB7K8oRUDFq0n+FT4Elm+33d/QiTgUX23LvX7EpXDC7A+GEKcCJSZAPeLWgNHfqvID1Cbdr3iQCwWK5gHNyJV2zT/AbneAsrmn2cb40Ydvp+nBrv+AFAPwGc9M/aIFF+X9ftbfnMEY//lJi+ar3DALcAj/00nKPkZyAI8zAB+ZzZKi3lz9lgAAjM+eI73KKg0wikAAfOroA3u4QgPIQADGh59MWsMxDRABAzC+dN4SXq4Bovry7eODVh03AfDN69O2U1yqL29jZz29YQQs0wBhfXkCQ3T/ke4QNUCxvjwGAuCruqPYFeCuGcC9hSvXzFswHOJLgP3V5UnLIRquMXvB6Rpf3Hpuu0aeRLpzj5BIHKl8MUtK5TT4MT20hzMaYB/sOZ95Q3vOQghSUKaekaKpXEWqBZS01+So7FxUv2j2d+9pUX++LPcxAJ/wxx+/Hcq60MsATH//Sg8Ozn3aegr8tAnt7gCbCv28G9rerS4aDGmzsUXp4Ae0mJusJK+/ztxkCf4hPv/iGmuj2FjK44+vtbeqe3ha3dHCmu3OanK73hgG7n89bWBIgBreZA19ZAkOOGaU1LKXOTVtT7H9niansU1ZV0a3r9y2BjA5Kl2rKPVjUIEOr/4RryUrfF45wTc+V2ViEwfGRUkSx70Tscz+BZvy/wIaeEA0v7CG3QAAAABJRU5ErkJggg==');
+  background-size: 26px 26px;
+  padding-left: 44px;
+  margin-bottom: 5px;
+  margin-left: 24px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+
+.export_section p{
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-left: 30px;
+}
+
+#sql_table
+{
+  font-size: 16px;
+  margin-right: 6px;
+}
+
+.sqlbuttons
+{
+  display: none;
+}
+
+#debug
+{
+  overflow-y: scroll;
+  border: 1px solid #666;
+  background-color: white;
+}

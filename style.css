@@ -190,6 +190,7 @@ a, a:visited{
     border-bottom: 1px solid rgb(189, 171, 137);
     display: inline-block;
     padding-bottom: 4px;
+    text-transform: capitalize;
 }
 
 .skill-group-list

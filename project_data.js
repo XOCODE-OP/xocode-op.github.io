@@ -1,5 +1,4 @@
 
-
 // Games and Prototypes in 2D
 var projects = [
   {
@@ -17,7 +16,8 @@ var projects = [
     "create new ones. New incoming and outgoing transactions are shown in the GUI" +
     "console. Balance is calculated. The program features a transaction list with full" +
     "details. Manage addresses.<br /><br />" +
-    "Send satoshi to a target address. All the basic functionality."
+    "Send satoshi to a target address. All the basic functionality.",
+    group: "crypto"
   },{
     title: "Bitcoin Java Module",
     minilabel: "Bitcoin Java Module",
@@ -33,7 +33,8 @@ var projects = [
     "- Check balance<br />"+
     "- Print / See all transactions of a given wallet<br />"+
     "- Send coins to address<br />"+
-    "- Get new addresses for your wallet<br />"
+    "- Get new addresses for your wallet<br />",
+    group: "crypto"
   },{
     title: "Bitcoin NodeJS Lazy API",
     minilabel: "Bitcoin Lazy API",
@@ -47,7 +48,8 @@ var projects = [
     "<br />A lazy API here is a name for an API that does NOT require you to run your own Bitcoin Node. Which is usually the case. This API interfaces with one of the many public website APIs to read out the blockchain’s data."+
     "<br />This code provides functionality to do anything one may want from blockchain data, however only read operations."+
     "<br />Check out blocks, addresses, transactions."+
-    "<br />See confirmations, hashes, inputs, outputs, amounts and more."
+    "<br />See confirmations, hashes, inputs, outputs, amounts and more.",
+    group: "crypto"
   },{
     title: "Bitcoin C++ Connector",
     minilabel: "Bitcoin Connector",
@@ -58,16 +60,8 @@ var projects = [
     bigimg: "btc_c_module1.png",
     bigimg2: "btc_c_module2.png",
     desc: "This C++ codebase is meant for merchants, payment systems and other Bitcoin node operators.<br />"+
-    "Sample on how to control a bitcoin node from C++ and send coins, view transaction, get balance, see all incoming transactions, see address specific incoming transactions (useful for payments) etc."
-  }, {
-    title: "HERMEX - Bitcoin Trading Bot",
-    minilabel: "Cryptocurrency Trading Bot",
-    proglang: "JavaScript",
-    tags: ["JavaScript", "HTML", "CSS", "NodeJS"],
-    url: "",
-    img: "missing.jpg",
-    bigimg: "missing.jpg",
-    desc: "2019 Java Bitcoin Wallet. UNDER CONSTRUCTION, description TBD."
+    "Sample on how to control a bitcoin node from C++ and send coins, view transaction, get balance, see all incoming transactions, see address specific incoming transactions (useful for payments) etc.",
+    group: "crypto"
   },{
     title: "Ebisu - Cryptocurrency Trading Bot",
     minilabel: "Cryptocurrency Trading Bot",
@@ -80,7 +74,8 @@ var projects = [
     desc: "This cryptocurrency trading bot was written in 2017 using Java on IntelliJ.<br />It uses Bittrex to trade and can trade whichever coin is on Bittrex, using"+
     " the Bittex API. CLI only. <br />"+
     "It features basic trend and price analysis as well as a watchlist to give certain coins specific attention. And a blacklist to ignore some coins specifically, "+
-    "even if the bot thinks that the trend shows an opportunity. I wrote this bot for fun, to see if I could scalp some volatility."
+    "even if the bot thinks that the trend shows an opportunity. I wrote this bot for fun, to see if I could scalp some volatility.",
+    group: "crypto"
   },{
     title: "Android Crypto Portfolio App",
     minilabel: "Android Crypto App",
@@ -98,7 +93,8 @@ var projects = [
     "- Create transactions<br />"+
     "- Auto save and load to file<br />"+
     "- Calculation to USD value<br />"+
-    "- Total amount calculation<br /><br />"
+    "- Total amount calculation<br /><br />",
+    group: "crypto"
   },
   {
     title: "Cryptocurrency Dashboard ",
@@ -114,11 +110,22 @@ var projects = [
     "- Cryptocurrency Price Watch. See live prices at all times.<br />"+
     "- Cryptocurrency Graphs. Check the current charts for most crypto coins.<br />"+
     "- Cryptocurrency Converter. Convert from any into any crypto currency, dynamically.<br />"+
-    "- Cryptocurrency Portfolio. Add holdings, make changes, add real balances from the blockchain and see the total value in USD."
+    "- Cryptocurrency Portfolio. Add holdings, make changes, add real balances from the blockchain and see the total value in USD.",
+    group: "crypto"
+  }, 
+  {
+    title: "ANUBIS.LINK",
+    minilabel: "ANUBIS.LINK",
+    proglang: "JavaScript Web3",
+    tags: ["JavaScript", "HTML", "CSS", "Web3"],
+    url: "http://anubis.link",
+    img: "missing.jpg",
+    bigimg: "missing.png",
+    bigimg2: "missing.png",
+    desc: `ye`,
+    group: "crypto"
   }, 
 
-
-  
   {
     title: "Video Streaming App Prototype",
     minilabel: "Video Streaming App",
@@ -132,7 +139,8 @@ var projects = [
     "Basic search and filter is provided. Check out the video and screenshots.<br />"+
     "A number of videos and categories are provided via json library file. There is also a side bar menu.<br /><br />"+
     "Written in Javascript/HTML using ElectronJS, this can used to build your code natively for Windows, Mac and Linux as a desktop application. ",
-    video: "https://www.youtube.com/embed/KJ4UWkKPOmk"
+    video: "https://www.youtube.com/embed/KJ4UWkKPOmk",
+    group: "electron desktop apps"
   },
   {
     title: "LitSmart - Smart Text Editor",
@@ -149,7 +157,19 @@ var projects = [
     "wikipedia entries and word definitions. The user may also select/highlight any part of the text "+
     "and thereby manually start this process with the selected part.<br /><br />"+
     "Smart, Automatic, on the fly:<br /> Word Definitons<br /> Wikipedia<br /> Synonyms.",
-    video: "https://player.vimeo.com/video/315198634"
+    video: "https://player.vimeo.com/video/315198634",
+    group: "electron desktop apps"
+  },{
+    title: "ClipSyne",
+    minilabel: "Clipboard Manager",
+    proglang: "Electron",
+    tags: ["JavaScript", "HTML", "CSS", "Electron"],
+    url: "https://github.com/XOCODE-OP/ClipSyne",
+    img: "missing.jpg",
+    bigimg: "missing.jpg",
+    bigimg2: "missing.jpg",
+    desc: "ClipSyne",
+    group: "electron desktop apps"
   },{
     title: "Smart Code Helper - AUTOMATIC code Suggestions",
     minilabel: "Code Editor",
@@ -162,7 +182,8 @@ var projects = [
     "help and solutions to the developer while working.<br />Automatically, "+
     "the program will look at the current line of code and will search for suggestions online or the developer may select any "+
     "part of the code and manually start this process with the selected part.",
-    video: "https://player.vimeo.com/video/314468741"
+    video: "https://player.vimeo.com/video/314468741",
+    group: "electron desktop apps"
   },
   {
     title: "Music Player & Streaming - Electron App Template",
@@ -182,7 +203,8 @@ var projects = [
     "<br />- Search/filter by title or various tags like instruments or feel."+
     "<br /><br />All of the basic functionality of such a music app are found here."+
     "<br />Of course this can be used for local files too instead of streaming, ideally both.",
-    video: "https://www.youtube.com/embed/NFObQVqphGU"
+    video: "https://www.youtube.com/embed/NFObQVqphGU",
+    group: "electron desktop apps"
   },
   {
     title: "Password Manager  - Application Template",
@@ -198,7 +220,8 @@ var projects = [
     "You can add and remove as many username/email/password combinations as you want; "+
     "These are stored encrypted as a json file, holding all the data.<br />Every entry has a title name and a text field for arbitrary notes.<br />"+
     "Encrypting is being done using AES.",
-    video: "https://www.youtube.com/embed/xaNRz1B2dXc"
+    video: "https://www.youtube.com/embed/xaNRz1B2dXc",
+    group: "electron desktop apps"
   },
   {
     title: "Medical Clinic App",
@@ -213,13 +236,14 @@ var projects = [
     "Appointment Calendar, custom made calendar.<br />"+
     "Patient data, searchable via various data types.<br />Online ticket list.<br />"+
     "Staff database.<br />Automatic saving and loading of all data. ",
-    video: "https://player.vimeo.com/video/351136064"
+    video: "https://player.vimeo.com/video/351136064",
+    group: "electron desktop apps"
   },
 
   
   {
     title: "Currency Converter Backend & Frontend via NodeJS & Express JS",
-    minilabel: "Express JS Server",
+    minilabel: "Currency Converter JS",
     proglang: "NodeJS",
     tags: ["NodeJS", "JavaScript", "HTML", "CSS"],
     url: "https://www.piecex.com/products/Currency-Converter-Website-with-NodeJS-Express-JS-524",
@@ -231,7 +255,8 @@ var projects = [
     Our frontend has JavaScript code which requests the available currencies from our own server backend, which then in turn calls the external source. 
     The backend is implemented via NPM, NodeJS, Express JS. 
     ExpressJS will establish the listening to a port and serving content via routes. 
-    Routes are defined and highly managed by the user manually.`
+    Routes are defined and highly managed by the user manually.`,
+    group: "browser based"
   },
   
   {
@@ -247,7 +272,9 @@ var projects = [
     "Built from Firefox OS as a white-label fork. This white fork was designed to have many different specific custom use cases. <br />"+
     "Some of the use cases included car dealership digital catalogue, linux desktop port, "+
     "media tablet and restaurant tablet to order. Also smartphone forks for specific audiences. "+
-    "All apps needed were made, such as contacts app, launcher, call app etc.</p>"
+    "All apps needed were made, such as contacts app, launcher, call app etc.</p>",
+    group: "other",
+    hightlight: true
   }, 
  
   {
@@ -271,7 +298,8 @@ var projects = [
       "Reviews per item integration code and data model.<br /> "+
       "Rating calculation from review<br /> "+
       "Wishlist<br /> Cart<br /> Cookies<br /> Checkout<br /> Product details page with tabs<br /> etc.",
-      video: "https://player.vimeo.com/video/325359221"
+      video: "https://player.vimeo.com/video/325359221",
+      group: "browser based"
     },
     
     {
@@ -292,7 +320,8 @@ var projects = [
       " so that your playback window as well will scroll at the same time in the playback.<br />Another thing tracked are resize events. "+
       "Whenever the user resizes their browser we simulate this in the playback. "+
       "It also account for this during positional tracking and heatmap drawing.",
-      video: "https://player.vimeo.com/video/304994023"
+      video: "https://player.vimeo.com/video/304994023",
+      group: "browser based"
     }, 
     
     {
@@ -315,7 +344,8 @@ var projects = [
       "just clicking one button is enough to export it.<br />Using this software you can easily build your own click tracker, page funnel, "+
       "analytics platform and more.</p>"+
       "<p>Technologies used: HTML, CSS, SQL, PHP (Development used an Apache server)</p>",
-      video: "https://www.youtube.com/embed/vXUrEDPJI5E"
+      video: "https://www.youtube.com/embed/vXUrEDPJI5E",
+      group: "browser based"
     },
      
     {
@@ -330,7 +360,8 @@ var projects = [
       "in which the users can open new issues, assign priorities to them, as well as status. "+
       "People can be assigned to the issue and comments can be posted.<br />All operations in this template use dynamic ajax. "+
       "This is a single page using JavaScript and PHP.",
-      video: "https://player.vimeo.com/video/301999489"
+      video: "https://player.vimeo.com/video/301999489",
+      group: "browser based"
     },{
       title: "News Website Template",
       minilabel: "News Website",
@@ -344,7 +375,8 @@ var projects = [
       "HTML &amp; CSS structure.<br />"+
       "Using MySQL.<br /><br />"+
       "Frameworks used: Jquery and Lity.<br /><br />",
-      video: "https://player.vimeo.com/video/300912983"
+      video: "https://player.vimeo.com/video/300912983",
+      group: "browser based"
     },{
       title: "Small Website Template",
       minilabel: "Small Website",
@@ -360,7 +392,8 @@ var projects = [
       "Frameworks used: Jquery and Lity.<br /><br />"+
       "Single Page JavaScript templating. Dynamic content injection:<br />"+
       "We use templating in JavaScript, meaning the entire content of the website ad every tab/page is contained within the JavaScript file, inside the tabs variable, which is a json variable.<br />This way we only have one HTML file with the structure, we never have to reload, single page but we also don\u2019t need PHP, any server side code or any other frameworks.",
-      video: "https://player.vimeo.com/video/299832620"
+      video: "https://player.vimeo.com/video/299832620",
+      group: "browser based"
     },
     {
       title: "Restaurant Ordering Tablet",
@@ -374,7 +407,8 @@ var projects = [
       "Many restaurants have switched from paper menus to ordering with digital tablets, "+
       "making it easy to browse and order without the need of a waiter, while impressing the customer.<br /><br />"+
       "Possible to use with ElectronJS or in fullscreen mode on a tablet, for native experience.",
-      video: "https://www.youtube.com/embed/AwGYaVqY5OU"
+      video: "https://www.youtube.com/embed/AwGYaVqY5OU",
+      group: "browser based"
     },{
       title: "Marketing Website - Template",
       minilabel: "Marketing Website",
@@ -392,7 +426,8 @@ var projects = [
       "- Colors, alignments, images easily changed.<br />"+
       "- Slides with multiple sub slides, horizontally<br />"+
       "- Animations that trigger upon scrolling down to the content<br /><br />Using HTML, CSS and some JavaScript.",
-      video: "https://www.youtube.com/embed/T01pePBDMYI"
+      video: "https://www.youtube.com/embed/T01pePBDMYI",
+      group: "browser based"
     },{
       title: "Web Login Register System - Template",
       minilabel: "Web User System",
@@ -404,7 +439,8 @@ var projects = [
       desc: "This is a login and register code module for php.<br />"+
       "It uses BCRYPT to save password hashes, saves PHP sessions to the database and checks some basic injection problems.<br />"+
       "Fully functional for login and registering.",
-      video: "https://www.youtube.com/embed/XUrtayZOtAs"
+      video: "https://www.youtube.com/embed/XUrtayZOtAs",
+      group: "browser based"
     },
     {
       title: "Ticket System - Web Template",
@@ -417,7 +453,8 @@ var projects = [
       desc: "Complete web ticket system.<br />"+
       "Includes ticket status, administration, appending comment system, changing of status, timestamps, email system.<br />"+
       "using PHP mysql database and vanilla webstack + jQuery.",
-      video: "https://www.youtube.com/embed/Y9RPuVUiQ3U"
+      video: "https://www.youtube.com/embed/Y9RPuVUiQ3U",
+      group: "browser based"
     },
     {
       title: "Mock-data Generator",
@@ -430,7 +467,8 @@ var projects = [
       desc: "This is a mock data (sample data) generator, made with web tech and usable in the browser.<br />"+
       "Either generate one set or as many rows of random data as you need.<br />"+
       "Over 40 different data types are supported like random numbers, strings, UUIDs, dates, IP addresses, names, addresses etc. Additionally you can export the data as JSON or SQL.",
-      video: "https://player.vimeo.com/video/354595564"
+      video: "https://player.vimeo.com/video/354595564",
+      group: "browser based"
 
     },
     {
@@ -448,7 +486,8 @@ var projects = [
       "The stock tab polls a number of common stocks to check as well as the possibility for the user to "+
       "search for any term and get the stock and it’s quote for the best match. "+
       "The search term does not have to be a symbol, it can be part of the name or description etc.",
-      video: "https://player.vimeo.com/video/345826696"
+      video: "https://player.vimeo.com/video/345826696",
+      group: "browser based"
     },{
       title: "Survey System",
       minilabel: "Survey System",
@@ -463,7 +502,8 @@ var projects = [
       "which gets saved to HTML storage. The JavaScript in this project uses jQuery and sets up all the click events. "+
       "Also it sets up all the automatic refresh calls. There is a surveys object which contains an array of surveys, each surveys has an array of "+
       "questions and every question has an array of choices. The choices can be of different types.For test purposes, "+
-      "the code will create sample surveys for you to play around with a see. Obviously this can also be used for other purposes that require a choice system, like assistants or similar."
+      "the code will create sample surveys for you to play around with a see. Obviously this can also be used for other purposes that require a choice system, like assistants or similar.",
+      group: "browser based"
     },{
       title: "Web 3D Model Viewer Module - via FBX and JavaScript",
       minilabel: "Web 3D Model Viewer",
@@ -475,7 +515,24 @@ var projects = [
       video: "https://player.vimeo.com/video/328351223",
       desc: "This is a web codebase written in HTML, JavaScript and CSS. "+
       "It shows include a 3D model, using the fbx file format, in a browser / web system. Mouse controls can be used to rotate the model and look at it. "+
-      "Whenever the mouse is not inside the preview box, it is rotated slightly by itself."
+      "Whenever the mouse is not inside the preview box, it is rotated slightly by itself.",
+      group: "browser based"
+    },
+    {
+      title: "Code Base Analysis Tool",
+      minilabel: "Code Analysis Program",
+      tags: ["JavaScript", "NodeJS"],
+      img: "missing.jpg",
+      bigimg: "missing.jpg",
+      bigimg2: "missing.jpg",
+      proglang: "NodeJS",
+      subline: "Source Code Analysis Tool",
+      desc: "<p>TODO TODO TODO TODO TODO TODO TODO TODO This project scans code bases, compares them against other code bases and calculates a similarity score. "+
+      "It also generates a list of files and a list of functions for every source code file, supporting many programming languages.</p>"+
+      "<p>Runs on a webserver, responds to REST calls, uses AWS build. </p>"+
+      "<p>Techs used: C#, ASP .NET, React, Kestrel, AWS</p>",
+      group: "other",
+      hightlight: true
     },
     {
       title: "EduForm - Learning Platform Template - JavaScript Single Page",
@@ -491,7 +548,8 @@ var projects = [
       "The page features as many courses. Courses have a title, description, image. Every course has a number of slides. "+
       "Every slide has a title and can have arbitrary HTML code for its content. Every page can also include a quiz, "+
       "which has to be answered correctly in order to progress to the next slide. "+
-      "Other features include: History, HTML5 storage saving and loading, Search function, Filter course lists, Progress per course is saved, Quizzes"
+      "Other features include: History, HTML5 storage saving and loading, Search function, Filter course lists, Progress per course is saved, Quizzes",
+      group: "browser based"
     },{
       title: "3D CSS Pack: Isometric, 3D Charts, Tilting",
       minilabel: "Web 3D Model Viewer",
@@ -506,7 +564,8 @@ var projects = [
       "This pack includes: Isometric: Sideways angled way of looking at 3D graphics for a better overview perspective. "+
       "Used to give a better spatial impression of 3D depth. Chart Bars: Using 3D to create a graph in bars. "+
       "Chart Bars with Textures: Slightly modified version with textures. "+
-      "Tilt: Mouse following 3D tilt rendering. Effect can be modified for all sorts of slight or heavy tilt effects."
+      "Tilt: Mouse following 3D tilt rendering. Effect can be modified for all sorts of slight or heavy tilt effects.",
+      group: "browser based"
     },{
       title: "Amazon S3 bucket downloader",
       minilabel: "AWS S3 Downloader",
@@ -518,9 +577,10 @@ var projects = [
       bigimg2: "s32.jpg",
       desc: "This project is a showcase project written in C# using the AWS SDK to show how to download your data from AWS S3 buckets.<br />"+
       "Specify the bucket name, the bucket key, your secret key and access key for AWS and you can download it directly and process it inside your C# code.<br />"+
-      "It is a console program to show how to access data from your S3 and incorporate it."
+      "It is a console program to show how to access data from your S3 and incorporate it.",
+      group: "browser based"
     },{
-      title: "Source Code Analysis Backend",
+      title: "Source Code Analysis Tool",
       minilabel: "Code Analysis Program",
       tags: ["csharp"],
       img: "codeana.jpg",
@@ -531,7 +591,8 @@ var projects = [
       desc: "<p>This project scans code bases, compares them against other code bases and calculates a similarity score. "+
       "It also generates a list of files and a list of functions for every source code file, supporting many programming languages.</p>"+
       "<p>Runs on a webserver, responds to REST calls, uses AWS build. </p>"+
-      "<p>Techs used: C#, ASP .NET, React, Kestrel, AWS</p>"
+      "<p>Techs used: C#, ASP .NET, React, Kestrel, AWS</p>",
+      group: "c# and unity"
     },{
       img: "thesisvr.gif",
       bigimg: "thesis.png",
@@ -543,7 +604,9 @@ var projects = [
       minilabel: "3D VR Game",
       desc: "<p>In my bachelor thesis I looked at the difference in storytelling between VR and traditional video games." +
         "<br />What kind of techniques can be used to convey exposition to the player, what tools, what methods, advantages and disadvantages." +
-        "<br />This demo was used to measure the difference in time between PC players and VR players as they try to solve puzzles and finish this game.</p>"
+        "<br />This demo was used to measure the difference in time between PC players and VR players as they try to solve puzzles and finish this game.</p>",
+        group: "c# and unity",
+        hightlight: "true"
     },{
       title: "Demake Ninja",
       minilabel: "Lowpoly 3D Game Demo",
@@ -555,7 +618,8 @@ var projects = [
       subline: "Unity 3D Game",
       desc: "<p>Personal Project.</p><p>Low Poly video game made for a game jam.</p>"+
       "<p>Using Unity and C# this emulates the feel of Tenchu for PS1.</p>"+
-      "<p>Including models and textures.</p>"
+      "<p>Including models and textures.</p>",
+      group: "c# and unity"
     }, {
       img: "mpacman.gif",
       bigimg: "pacman.jpg",
@@ -568,7 +632,8 @@ var projects = [
       desc: "<p>An arcade style video game that was made specifically for a medical tradeshow, featuring relevant devices.</p>" +
         "<p>It was produced on request and was used at a tradeshow in April 2017. It also featured a highscore system for a giveaway at the tradeshow." +
         "The concept was pacman with a medical theme plus including the topic of tumors being removed by a special medical device, which is the player controls.</p>" +
-        "<p>It also has joystick support to emulate the feeling of using the actual medical device. At the tradeshow the game was used with an appropriate joystick.</p>"
+        "<p>It also has joystick support to emulate the feeling of using the actual medical device. At the tradeshow the game was used with an appropriate joystick.</p>",
+        group: "c# and unity"
     }, {
       title: "Dungeon Puzzle Gems",
       minilabel: "2D Game",
@@ -581,7 +646,8 @@ var projects = [
       "Match gems, chain, cause damage to the enemy and defeat the enemy.<br />"+
       "This project features sprites, backgrounds, textures, sound effects, "+
       "particle effects.",
-      video: "https://www.youtube.com/embed/22hKrGFfTio"
+      video: "https://www.youtube.com/embed/22hKrGFfTio",
+      group: "c# and unity"
     },
     
      {
@@ -596,7 +662,8 @@ var projects = [
       "This is a Unity template for creating puzzle games with blocks, filling up rows or columns. "+
       "This project features sprites, many background layers, sound effects, particle effects, music and all the code, "+
       "this template provides a fully working basic prototype.",
-      video: "https://www.youtube.com/embed/J1vlouQeZkQ"
+      video: "https://www.youtube.com/embed/J1vlouQeZkQ",
+      group: "c# and unity"
     }, {
       title: "Flappy Parkour Game - Unity Template",
       minilabel: "2D Game",
@@ -617,7 +684,8 @@ var projects = [
       "<br />- Sound Effects"+
       "<br />- Music"+
       "<br />- Prefabs",
-      video: "https://www.youtube.com/embed/UcLoesKUyiw"
+      video: "https://www.youtube.com/embed/UcLoesKUyiw",
+      group: "c# and unity"
     },  {
       img: "vndungeoncrawler.gif",
       bigimg: "dungeoncrawl.jpg",
@@ -627,7 +695,8 @@ var projects = [
       title: "Visual Novel Dungeon Crawler",
       minilabel: "3D Game",
       subline: "Visual novel dungeon crawler type video game prototype<br>PC using Unity3D<br>2017",
-      desc: "<p>This was a prototype I made to play around with the idea of a Shin Megami Tensei: Strange Journey type game.</p>"
+      desc: "<p>This was a prototype I made to play around with the idea of a Shin Megami Tensei: Strange Journey type game.</p>",
+      group: "c# and unity"
     },{
       title: "Space Shooter - Unity Template",
       minilabel: "2D Game",
@@ -645,7 +714,8 @@ var projects = [
       "<br />- Music"+
       "<br />- Code"+
       "<br />- Particle Effects &amp; Prefabs",
-      video: "https://www.youtube.com/embed/4fPUuknyeOA"
+      video: "https://www.youtube.com/embed/4fPUuknyeOA",
+      group: "c# and unity"
     }, {
       title: "Visual Novel template for Unity",
       minilabel: "2D Game",
@@ -662,7 +732,8 @@ var projects = [
       "- Sample music<br />"+
       "- Sample backgrounds<br /><br />"+
       "This includes all you need to get you started. Easy to easy, easy to extend. Including assets.",
-      video: "https://www.youtube.com/embed/q0jgg1wkRck"
+      video: "https://www.youtube.com/embed/q0jgg1wkRck",
+      group: "c# and unity"
     },
     
     {
@@ -677,7 +748,8 @@ var projects = [
       desc: "This is a web server made in C#. "+
       "The exact technology stack here is C# ASP.NET Core and Kestrel. "+
       "This also uses React in order to facilitate a web browser interface, which can be used for in and outputs. "+
-      "Handle all sorts of requests and establish for C# web server with this prototype."
+      "Handle all sorts of requests and establish for C# web server with this prototype.",
+      group: "c# and unity"
     }, {
       title: "Quantum Nucleus",
       minilabel: "2D Game Framework",
@@ -710,7 +782,9 @@ var projects = [
       "<a href='https://www.youtube.com/watch?v=PpLM6_SBlj8' target='_blank'>Video: Grenade Gameplay</a><br />"+
       "<a href='https://www.youtube.com/watch?v=-TFyOpejPi0' target='_blank'>Video: Black Hole Physics</a><br />"+
       "<a href='https://www.youtube.com/watch?v=j7DX4Eyrh-Y' target='_blank'>Video: No Particles, Electricity VFX 1</a><br />"+
-      "<a href='https://www.youtube.com/watch?v=nyAkTwg9TkE' target='_blank'>Video: No Particles, Electricity VFX 2</a><br />"
+      "<a href='https://www.youtube.com/watch?v=nyAkTwg9TkE' target='_blank'>Video: No Particles, Electricity VFX 2</a><br />",
+      highlight: true,
+      group: "java and android"
     }, {
       title: "Black Nebula",
       minilabel: "2D Game",
@@ -725,7 +799,8 @@ var projects = [
       "You control a spaceship trying to survive a barrage of enemies who pursuit and trying to kill you. Reminiscent of Asteroids or even Sinistar, "+
       "since this game incorporates a 'Nemesis'</p>" +
         "<p>Developed with Java and Libgdx(OpenGL). Released on PC & Android.</p>" +
-        "<br><p><a class='githublink' href='https://github.com/XOCODE-OP/Black-Nebula' target='_blank' >Github Link</a></p>"
+        "<br><p><a class='githublink' href='https://github.com/XOCODE-OP/Black-Nebula' target='_blank' >Github Link</a></p>",
+        group: "java and android"
         //"<br><p><a href='https://drive.google.com/open?id=0B9Nkz0-YWCIDci14OUdOQW1kTms' target='_blank'>Link to Windows Installer</a> &nbsp,  &nbsp, |  &nbsp,  &nbsp, " +
         //"<a href='https://play.google.com/store/apps/developer?id=Alchemic%20Tempest' target='_blank'>Link to Google Play</a> &nbsp,  &nbsp, |  &nbsp,  &nbsp, " +
         //"<a href='https://drive.google.com/open?id=0B9Nkz0-YWCIDSFdvRnJTamQxQms' target='_blank'>Direct APK Link</a></p>" +
@@ -742,7 +817,8 @@ var projects = [
       "Creating Layers, changing types, tile-favorites, quick tileset-changing, items, enemies, portals, scripts and scenes, "+
       "playing and rendering lights in realtime, setting up AI behaviors - ALKAHEST is becoming a great and powerful tool to shape Quantum Nucleus. "+
       "Developed with Java, LWJGL, OpenGL." +
-        "<br />side scroller, scripting, tiles, tilemaps, layers, save to file load, items, enemies, events, OpenGL gui, lights, new layer system"
+        "<br />side scroller, scripting, tiles, tilemaps, layers, save to file load, items, enemies, events, OpenGL gui, lights, new layer system",
+        group: "java and android"
     }, {
       img: "2dgravityphysics.gif",
       bigimg: "2dgravityphysics.png",
@@ -754,7 +830,8 @@ var projects = [
       desc: "<p>2D engine framework to simulate gravity<br>PC using Java, Libgdx, OpenGL</p>"+
       "<p>This includes slopes of technically any angle, open and closed platforms, moving horizontally and vertically.</p>" +
         "<p>Established necessary technology.</p>" +
-        "<p>Developed with Java & Libgdx on PC.</p><br /><a class='githublink' href='https://github.com/XOCODE-OP/PhysicsMaster' target='_blank' >Github Link</a>"
+        "<p>Developed with Java & Libgdx on PC.</p><br /><a class='githublink' href='https://github.com/XOCODE-OP/PhysicsMaster' target='_blank' >Github Link</a>",
+        group: "java and android"
     },
     
     {
@@ -771,7 +848,7 @@ var projects = [
       "functionality. The idea was that other app creators could integrate this SDK and advertise or give coupons, whenever people walked by beacons placed in retail locations."+
       "For this we teams up with an advertising company and manually placed beacons aroudn the city. <br />"+
       "<br />There is no UI for this is an SDK. There were also some basic security aspects.</p>",
-      //"<a class='githublink' href='https://github.com/XOCODE-OP/AndroidBluetoothLeBeaconsSDK' target='_blank'>Github Link</a>"
+      group: "java and android"
     }, {
       title: "2D Puzzle Game for Android",
       minilabel: "2D Game",
@@ -785,7 +862,8 @@ var projects = [
         "<p>This game features a polygon based map system with AABB collisions.</p>" +
         "<p>Developed with Java & Libgdx. Released on PC & Android.</p>" +
         "<p>Personally I developed the early prototypes for this game, after that my position shifted to that of a Producer.</p>" +
-        "<br><br><p><a href='https://play.google.com/store/apps/developer?id=Alchemic%20Tempest' target='_blank'>Link to Google Play</a></p>"
+        "<br><br><p><a href='https://play.google.com/store/apps/developer?id=Alchemic%20Tempest' target='_blank'>Link to Google Play</a></p>",
+        group: "java and android"
     },
     {
       title: "SKIRMISH",
@@ -799,7 +877,8 @@ var projects = [
       "<p>Each player starts off with a couple of different vehicles, units, like tanks and helicopters. There are also different terrains. "+
       "Each player has to strategically move and place units to eliminate the enemies units.</p>" +
         "<p>Developed with Java & Libgdx. Released on PC & Android.</p>" +
-        "<br><p><a class='githublink' href='https://github.com/XOCODE-OP/SKIRMISH' target='_blank' >Github Link</a></p>"
+        "<br><p><a class='githublink' href='https://github.com/XOCODE-OP/SKIRMISH' target='_blank' >Github Link</a></p>",
+        group: "java and android"
         //"<br><p><a href='https://drive.google.com/open?id=0B9Nkz0-YWCIDQ0w3QXFWY3FIanc' target='_blank'>Link to Windows Installer</a> &nbsp,  &nbsp, |  &nbsp,  &nbsp, " +
         //"<a href='https://play.google.com/store/apps/developer?id=Alchemic%20Tempest' target='_blank'>Link to Google Play</a> &nbsp,  &nbsp, |  &nbsp,  &nbsp, " +
         //"<a href='https://drive.google.com/open?id=0B9Nkz0-YWCIDV3BiNGZUZE5wR3c' target='_blank'>Direct APK Link</a></p>" +
@@ -815,7 +894,8 @@ var projects = [
       itemID: "Discord Bot",
       desc: "<p>Chat bot for discord using Discord4J and python.</p>"+
       "<p>Various utility functions like searching for media files via query, loading and buffering it, playing it to audio channels, searching for images and loading them into the chat,"+
-      " chat games and stats and chat administration.</p>"
+      " chat games and stats and chat administration.</p>",
+      group: "python"
     },
     {
       title: "Stock Photo Finder - Python Cross Platform Desktop UI Program",
@@ -827,7 +907,8 @@ var projects = [
       bigimg: "stockimages.jpg",
       desc: "<p>Written in Python, this is a cross platform desktop application using PyQt. "+
       "I wanted to use Qt in a project and also wanted to make a python app that actually has a UI and runs on a desktop client.</p>"+
-      "<p>In this app search terms can be typed in and free stock photos will be found, using popular online sources.</p>"
+      "<p>In this app search terms can be typed in and free stock photos will be found, using popular online sources.</p>",
+      group: "python"
     },
     {
       title: "Autoprice",
@@ -839,7 +920,8 @@ var projects = [
       bigimg2: "autoprice.jpg",
       desc: "This is an algorithm to automatically set the price of items on an ecommerce platform depending on analytics, external and "+
       "internal. By looking at page views, favorite listings and such, an internal ranking is calculated. Externally news and stocks are evaluated to gauge general"+
-      "interest in types of items. No UI, CLI only."
+      "interest in types of items. No UI, CLI only.",
+      group: "python"
     }
 
   ];

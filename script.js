@@ -149,125 +149,54 @@ $( document ).ready(function()
     // }
     // $(".content-page[data-pageid='skills'] .skills-container").append(_insert);
 
-    //projects page
-    _insert = "";
+    //find all groups
+    function onlyUnique(value, index, self) { return self.indexOf(value) === index; }
+    //pureList = pureList.filter(onlyUnique);
+
+    let project_groups_strings = [];
     for (let i = 0; i < projects.length; i++)
     {
-        if (i == 0 )
-        {
-            _insert = _insert + "<div class='skill-group'><h3>Crypto:</h3><div class='skill-group-list'>";
-        }
-        else if (i == 8)
-        {
-            _insert = _insert + "<div class='skill-group'><h3>Electron:</h3><div class='skill-group-list'>";
-        }
-        else if (i == 8+6)
-        {
-            _insert = _insert + "<div class='skill-group'><h3>JavaScript, PHP, HTML, CSS, Web Stack:</h3><div class='skill-group-list'>";
-        }
-        else if (i == 8+6+18)
-        {
-            _insert = _insert + "<div class='skill-group'><h3>C# and Unity:</h3><div class='skill-group-list'>";
-        }
-        else if (i == 8+6+18+12)
-        {
-            _insert = _insert + "<div class='skill-group'><h3>Java and Android:</h3><div class='skill-group-list'>";
-        }
-        else if (i == 8+6+18+12+7)
-        {
-            _insert = _insert + "<div class='skill-group'><h3>Python:</h3><div class='skill-group-list'>";
-        }
-        
-        if (!projects[i].proglang) projects[i].proglang = "";
-        _insert = _insert + 
-        "<div class='project_tile' style='background-image: url(img/tile_thumbnails/"+
-        projects[i].img+")' data-arrayindex='"+i+"' data-project='"+projects[i].title+"'><div class='tile-label'>"+
-        projects[i].minilabel+"</div><div class='tile-proglang'>"+
-        projects[i].proglang+"</div></div>";
+        projects[i].id = i;
+        project_groups_strings.push(projects[i].group);
+    }
+    project_groups_strings = project_groups_strings.filter(onlyUnique);
 
-        //crypto \\ electron \\ web stack \\ C# Unity || Java Android || Python
-        if (i == 7 || i == 7+6 || i == 7+6+18 || i == 7+6+18+12 || i == 7+6+18+12+7 || i == 7+6+18+12+7+3)
+    let project_groups = {};
+    for (let i = 0; i < project_groups_strings.length; i++)
+    {
+        project_groups[project_groups_strings[i]] = [];
+        for (let pp = 0; pp < projects.length; pp++)
         {
-            _insert = _insert + "</div></div><br />";
+            if (projects[pp].group === project_groups_strings[i])
+            {
+                project_groups[project_groups_strings[i]].push(projects[pp]);
+            }
         }
+    }
+
+    let _insert = "";
+    for (const [groupname, projects] of Object.entries(project_groups))
+    {
+        _insert = _insert + `<div class='skill-group' data-group='${groupname}'><h3>${groupname}:</h3><div class='skill-group-list' data-group='${groupname}'>`;
+        for (let x = 0; x < projects.length; x++)
+        {
+            if (!projects[x].proglang) projects[x].proglang = "";
+
+            _insert = _insert + `<div class='project_tile' style='background-image: url(img/tile_thumbnails/${projects[x].img})' data-arrayindex='${x}' 
+            data-project='${projects[x].img}' onclick='projectTileClick(${projects[x].id});'><div class='tile-label'>${projects[x].minilabel}</div>
+            <div class='tile-proglang'>${projects[x].proglang}</div></div>`;
+        }
+        _insert = _insert + "</div></div><br />";
     }
     $(".content-page[data-pageid='projects'] .projects-container").append(_insert);
 
-    $(".project_tile").each(function()
-    {
-        $(this).click(function()
-        {
-            let ii = parseInt($(this).data("arrayindex"));
-            let obj = projects[ii];
+    
 
-            let slide_one = $(".focus_project-slider_slide-1");
-            let slide_two = $(".focus_project-slider_slide-2");
 
-            if (obj.bigimg)
-                slide_one.html("<a href='img/project-big/"+obj.bigimg+"' target='_blank'><div class='slide-img' style='background-image: url(img/project-big/"+obj.bigimg+")' /></div></a>");
-            else
-                slide_one.html("<div class='slide-img' style='background-image: url(img/project-big/missing.jpg)' /></div>");
-
-            if (obj.video) 
-                slide_two.html("<iframe src='"+obj.video+"' frameborder='0' allowfullscreen></iframe>");
-            else if (obj.bigimg2)
-                slide_two.html("<a href='img/project-big/"+obj.bigimg2+"' target='_blank'><div class='slide-img' style='background-image: url(img/project-big/"+obj.bigimg2+")' /></div></a>");
-            else
-                slide_two.html("<div class='slide-img' style='background-image: url(img/project-big/missing.jpg)' /></div>");
-
-            let wfac = ("" + $(".focus_project-flex").css("width")).split("%")[0];
-            wfac = parseInt(wfac) / 100.0;
-
-            let slidew = $(".focus_project").width() * wfac;
-            console.log(slidew);
-            slide_one.css("left", "0px");
-            slide_two.css("left", slidew + "px");
-
-            let slider_arrow_prev = $(".focus_project-slider_prev");
-            let slider_arrow_next = $(".focus_project-slider_next");
-
-            slider_arrow_prev.click(function()
-            {
-                slide_one.animate({left: "0px"}, PAGE_ANIMATION_DURATION/8);
-                slide_two.animate({left: slidew+"px"}, PAGE_ANIMATION_DURATION/8);
-                slider_arrow_prev.hide();
-                slider_arrow_next.show();
-            });
-            slider_arrow_next.click(function()
-            {
-                slide_one.animate({left: "-"+slidew+"px"}, PAGE_ANIMATION_DURATION/8);
-                slide_two.animate({left: "0px"}, PAGE_ANIMATION_DURATION/8);
-                slider_arrow_prev.show();
-                slider_arrow_next.hide();    
-            });
-            slider_arrow_prev.hide();
-            slider_arrow_next.show();
-
-            //focus project content start
-            $(".focus_project-pic").css("background-image", "url(img/project-big/" + obj.bigimg + ")");
-            $(".focus_project-title").text(obj.title);
-            $(".focus_project-subline").text(obj.minilabel);
-            $(".focus_project-proglang").text(obj.proglang);
-            $(".focus_project-tags").html("");
-            for (let i = 0; i < obj.tags.length; i++)
-            {
-                const e = obj.tags[i];
-                $(".focus_project-tags").append("<span class='tagspan' style='opacity: 1'>" + e + "</span>");
-            }
-            $(".focus_project-desc").html(obj.desc).css("opacity", "1");
-            $(".focus_project-desc *").css("opacity", "1");
-            
-            //focus project content end
-
-            $(".focus_project").show();
-            // $(".focus_project").animate({top: "0px"}, PAGE_ANIMATION_DURATION/2, function()
-            // {
-            //     $(".focus_project *").animate({opacity: "1.0"}, PAGE_ANIMATION_DURATION/2);
-            // });
-            $(".focus_project *").animate({opacity: "1.0"}, PAGE_ANIMATION_DURATION/2);
-            
-        });
-    });
+    // $(".project_tile").each(function()
+    // {
+    //     $(this).click();
+    // });
 
     $( window ).resize(function() {
         if ($(".focus_project").is(":visible"))
@@ -308,3 +237,74 @@ $( document ).ready(function()
 
 });
 
+function projectTileClick(_id)
+{
+    let obj = projects[_id];
+
+    let slide_one = $(".focus_project-slider_slide-1");
+    let slide_two = $(".focus_project-slider_slide-2");
+
+    if (obj.bigimg)
+        slide_one.html("<a href='img/project-big/"+obj.bigimg+"' target='_blank'><div class='slide-img' style='background-image: url(img/project-big/"+obj.bigimg+")' /></div></a>");
+    else
+        slide_one.html("<div class='slide-img' style='background-image: url(img/project-big/missing.jpg)' /></div>");
+
+    if (obj.video) 
+        slide_two.html("<iframe src='"+obj.video+"' frameborder='0' allowfullscreen></iframe>");
+    else if (obj.bigimg2)
+        slide_two.html("<a href='img/project-big/"+obj.bigimg2+"' target='_blank'><div class='slide-img' style='background-image: url(img/project-big/"+obj.bigimg2+")' /></div></a>");
+    else
+        slide_two.html("<div class='slide-img' style='background-image: url(img/project-big/missing.jpg)' /></div>");
+
+    let wfac = ("" + $(".focus_project-flex").css("width")).split("%")[0];
+    wfac = parseInt(wfac) / 100.0;
+
+    let slidew = $(".focus_project").width() * wfac;
+    console.log(slidew);
+    slide_one.css("left", "0px");
+    slide_two.css("left", slidew + "px");
+
+    let slider_arrow_prev = $(".focus_project-slider_prev");
+    let slider_arrow_next = $(".focus_project-slider_next");
+
+    slider_arrow_prev.click(function()
+    {
+        slide_one.animate({left: "0px"}, PAGE_ANIMATION_DURATION/8);
+        slide_two.animate({left: slidew+"px"}, PAGE_ANIMATION_DURATION/8);
+        slider_arrow_prev.hide();
+        slider_arrow_next.show();
+    });
+    slider_arrow_next.click(function()
+    {
+        slide_one.animate({left: "-"+slidew+"px"}, PAGE_ANIMATION_DURATION/8);
+        slide_two.animate({left: "0px"}, PAGE_ANIMATION_DURATION/8);
+        slider_arrow_prev.show();
+        slider_arrow_next.hide();    
+    });
+    slider_arrow_prev.hide();
+    slider_arrow_next.show();
+
+    //focus project content start
+    $(".focus_project-pic").css("background-image", "url(img/project-big/" + obj.bigimg + ")");
+    $(".focus_project-title").text(obj.title);
+    $(".focus_project-subline").text(obj.minilabel);
+    $(".focus_project-proglang").text(obj.proglang);
+    $(".focus_project-tags").html("");
+    for (let i = 0; i < obj.tags.length; i++)
+    {
+        const e = obj.tags[i];
+        $(".focus_project-tags").append("<span class='tagspan' style='opacity: 1'>" + e + "</span>");
+    }
+    $(".focus_project-desc").html(obj.desc).css("opacity", "1");
+    $(".focus_project-desc *").css("opacity", "1");
+    
+    //focus project content end
+
+    $(".focus_project").show();
+    // $(".focus_project").animate({top: "0px"}, PAGE_ANIMATION_DURATION/2, function()
+    // {
+    //     $(".focus_project *").animate({opacity: "1.0"}, PAGE_ANIMATION_DURATION/2);
+    // });
+    $(".focus_project *").animate({opacity: "1.0"}, PAGE_ANIMATION_DURATION/2);
+    
+}
