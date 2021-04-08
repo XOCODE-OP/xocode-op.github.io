@@ -240,6 +240,16 @@ var projects = [
     group: "electron desktop apps"
   },
 
+  {
+    title: "Chrome Extension",
+    minilabel: "Chrome Extension",
+    proglang: "JavaScript",
+    tags: ["JavaScript", "HTML", "CSS"],
+    img: "missing.jpg",
+    bigimg: "missing",
+    desc: "Chrome extension",
+    group: "other"
+  },
   
   {
     title: "Currency Converter Backend & Frontend via NodeJS & Express JS",
@@ -264,7 +274,7 @@ var projects = [
     minilabel: "Firefox OS Fork",
     proglang: "JavaScript",
     tags: ["JavaScript", "HTML", "CSS"],
-    img: "nanooq-cover.gif",
+    img: "nanooq-cover.jpg",
     bigimg: "nanooq.gif",
     bigimg2: "nanooq.gif",
     desc: "Multi purpose operating system fork.<br />Built on Firefox OS. HTML, CSS, JS in 2014<br />"+
@@ -354,7 +364,7 @@ var projects = [
       proglang: "Web Tech",
       tags: ["JavaScript", "HTML", "CSS", "PHP"],
       url: "https://www.piecex.com/products/Issue-Tracker-Team-Manager-Web-Template-414",
-      img: "issue-tracker.gif",
+      img: "issue-tracker.jpg",
       bigimg: "issue-tracker.jpg",
       desc: "This an issue tracker / team manager system, like a Trello type board, "+
       "in which the users can open new issues, assign priorities to them, as well as status. "+
@@ -594,14 +604,14 @@ var projects = [
       "<p>Techs used: C#, ASP .NET, React, Kestrel, AWS</p>",
       group: "c# and unity"
     },{
-      img: "thesisvr.gif",
+      img: "thesisvr.jpg",
       bigimg: "thesis.png",
       tags: ["unity", "csharp", "game", "game3d", "vr", "PHP", "sql"],
-      proglang: "C#",
+      proglang: "C# Unity",
       video: "https://www.youtube.com/embed/59wvJi05PBg",
       subline: "First person puzzle based storytelling demo<br>PC and VR using Unity3D and SteamVR<br>2017",
       title: "Thesis: VR Storytelling",
-      minilabel: "3D VR Game",
+      minilabel: "Thesis VR Project",
       desc: "<p>In my bachelor thesis I looked at the difference in storytelling between VR and traditional video games." +
         "<br />What kind of techniques can be used to convey exposition to the player, what tools, what methods, advantages and disadvantages." +
         "<br />This demo was used to measure the difference in time between PC players and VR players as they try to solve puzzles and finish this game.</p>",
@@ -612,7 +622,7 @@ var projects = [
       minilabel: "Lowpoly 3D Game Demo",
       tags: ["unity", "csharp", "game", "game3d"],
       img: "demaken.jpg",
-      proglang: "C#",
+      proglang: "C# Unity",
       video: "https://www.youtube.com/embed/QYXrozqmjf0",
       bigimg: "demaken.jpg",
       subline: "Unity 3D Game",
@@ -621,12 +631,12 @@ var projects = [
       "<p>Including models and textures.</p>",
       group: "c# and unity"
     }, {
-      img: "mpacman.gif",
+      img: "mpacman.jpg",
       bigimg: "pacman.jpg",
       tags: ["unity", "csharp", "game", "game3d"],
       title: "Medical Pac-man",
-      minilabel: "3D Game",
-      proglang: "C#",
+      minilabel: "Medical Pac-man Game",
+      proglang: "C# Unity",
       bigimg2: "pac2.jpg",
       subline: "Tradeshow arcade style video game<br>PC using Unity3D<br>2017",
       desc: "<p>An arcade style video game that was made specifically for a medical tradeshow, featuring relevant devices.</p>" +
@@ -637,7 +647,7 @@ var projects = [
     }, {
       title: "Dungeon Puzzle Gems",
       minilabel: "2D Game",
-      proglang: "C#",
+      proglang: "C# Unity",
       tags: ["unity", "csharp", "game", "Game2D", "android"],
       url: "https://www.piecex.com/products/Dragon-Gems-Unity-Game-Template-408",
       img: "dungeon-puzzle.jpg",
@@ -653,7 +663,7 @@ var projects = [
      {
       title: "Puzzle Block - Game Template",
       minilabel: "2D Game",
-      proglang: "C#",
+      proglang: "C# Unity",
       tags: ["unity", "csharp", "game", "Game2D", "android"],
       url: "https://www.piecex.com/products/Puzzle-Block-Game-Template-405",
       img: "puzzleblock.jpg",
@@ -667,7 +677,7 @@ var projects = [
     }, {
       title: "Flappy Parkour Game - Unity Template",
       minilabel: "2D Game",
-      proglang: "C#",
+      proglang: "C# Unity",
       tags: ["unity", "csharp", "game", "Game2D", "android"],
       url: "https://www.piecex.com/products/Flappy-Parkour-Game-Unity-Template-401",
       img: "flappy.jpg",
@@ -687,10 +697,10 @@ var projects = [
       video: "https://www.youtube.com/embed/UcLoesKUyiw",
       group: "c# and unity"
     },  {
-      img: "vndungeoncrawler.gif",
+      img: "vndungeoncrawler.jpg",
       bigimg: "dungeoncrawl.jpg",
       tags: ["unity", "csharp", "game", "game3d"],
-      proglang: "C#",
+      proglang: "C# Unity",
       video: "https://www.youtube.com/embed/JuAltf0VfSY",
       title: "Visual Novel Dungeon Crawler",
       minilabel: "3D Game",
@@ -700,7 +710,7 @@ var projects = [
     },{
       title: "Space Shooter - Unity Template",
       minilabel: "2D Game",
-      proglang: "C#",
+      proglang: "C# Unity",
       bigimg: "spaceshooter.jpg",
       tags: ["unity", "csharp", "game", "Game2D", "android"],
       url: "https://www.piecex.com/products/Space-Shooter-Unity-Template-404",
@@ -719,7 +729,7 @@ var projects = [
     }, {
       title: "Visual Novel template for Unity",
       minilabel: "2D Game",
-      proglang: "C#",
+      proglang: "C# Unity",
       tags: ["unity", "csharp", "game", "Game2D"],
       url: "https://www.piecex.com/products/Visual-Novel-template-for-Unity-388",
       img: "visual-novel.jpg",
@@ -783,14 +793,14 @@ var projects = [
       "<a href='https://www.youtube.com/watch?v=-TFyOpejPi0' target='_blank'>Video: Black Hole Physics</a><br />"+
       "<a href='https://www.youtube.com/watch?v=j7DX4Eyrh-Y' target='_blank'>Video: No Particles, Electricity VFX 1</a><br />"+
       "<a href='https://www.youtube.com/watch?v=nyAkTwg9TkE' target='_blank'>Video: No Particles, Electricity VFX 2</a><br />",
-      highlight: true,
+      spotlight: true,
       group: "java and android"
     }, {
       title: "Black Nebula",
       minilabel: "2D Game",
       proglang: "Java OpenGL",
       tags: ["libgdx", "OpenGL", "Java", "game", "Game2D", "android"],
-      img: "blacknebula.gif",
+      img: "blacknebula.jpg",
       video: "https://www.youtube.com/embed/ZU7nIEHmQ_8",
       bigimg: "blacknebula.jpg",
       subline: "2D Arcade-Style Space Shooter Video Game,<br>PC using Java, Libgdx, OpenGL<br>2011-2013",
@@ -810,7 +820,7 @@ var projects = [
       minilabel: "Map & Game Editor",
       proglang: "Java OpenGL",
       tags: ["libgdx", "OpenGL", "Java", "game", "Game2D", "tools"],
-      img: "alkahest.gif",
+      img: "alkahest.jpg",
       bigimg: "alkahest.png",
       video: "https://www.youtube.com/embed/Vyl-B7aULOo",
       desc:  "The new Level Editor being developed alongside Quantum Nucleus, as such it is faily specialized for this game. "+
@@ -820,7 +830,7 @@ var projects = [
         "<br />side scroller, scripting, tiles, tilemaps, layers, save to file load, items, enemies, events, OpenGL gui, lights, new layer system",
         group: "java and android"
     }, {
-      img: "2dgravityphysics.gif",
+      img: "2dgravityphysics.jpg",
       bigimg: "2dgravityphysics.png",
       tags: ["libgdx", "OpenGL", "Java", "game", "Game2D", "tools"],
       title: "2D Gravity Physics",
@@ -835,7 +845,7 @@ var projects = [
     },
     
     {
-      img: "bloobuy.gif",
+      img: "bloobuy.jpg",
       proglang: "Android",
       bigimg: "missing.jpg",
       bigimg2: "missing.jpg",
@@ -854,7 +864,7 @@ var projects = [
       minilabel: "2D Game",
       proglang: "Android OpenGL",
       tags: ["libgdx", "OpenGL", "Java", "Game2D", "android"],
-      img: "stella.gif",
+      img: "stella.jpg",
       bigimg: "stella.png",
       video: "https://www.youtube.com/embed/YtJ38KFNZRU",
       desc: "<p>Cute puzzle adventure game with a lemmings feel to it. " +
@@ -870,7 +880,7 @@ var projects = [
       minilabel: "2D Game",
       proglang: "Android OpenGL",
       tags: ["libgdx", "OpenGL", "Java", "Game2D", "android"],
-      img: "skirmish.gif",
+      img: "skirmish.jpg",
       bigimg: "skirmish.jpg",
       video: "https://www.youtube.com/embed/d3ekBHEPjNo",
       desc: "<p>Turn-based strategy video game<br>PC, Android using Java, Libgdx, OpenGL</p>"+
