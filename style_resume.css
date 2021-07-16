@@ -34,9 +34,42 @@
     margin-bottom: 2%;
 }
 
+.name_aux
+{
+    width: 50%;
+}
+
+.exp_table-desc strong
+{
+    font-weight: 900;
+}
+
+.exp_table-desc .bold
+{
+    font-size: 14pt;
+}
+
+.exp_table-location
+{
+    color: rgb(88, 133, 255);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
 .res-title ._name
 {
     font-size: 32px;
+}
+
+.res-title a
+{
+    text-decoration: none;
+    color: orange; 
+}
+
+.res-title a:hover
+{
+    color: rgb(88, 133, 255);
 }
 
 .headerline
@@ -48,15 +81,9 @@
     margin: 8px 0;
 }
 
-.res-title a
-{
-    text-decoration: none;
-    color: white;
-}
-
 h2
 {
-    font-size: 1.5em;
+    font-size: 26pt;
 }
 
 
@@ -93,6 +120,7 @@ h2
 .exp_table-entry span.bold
 {
     font-weight: 900;
+    font-size: 14pt;
 }
 
 .exp_table-timeicon
@@ -143,4 +171,9 @@ h2
     height: 80px;
     background-size: contain;
     margin-top: 10px;
+}
+
+strong.thick
+{
+    font-weight: 900;
 }

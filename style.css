@@ -178,7 +178,7 @@ a, a:visited{
 {
     display: inline-block;
     margin: 10px 0;
-    padding: 10px;
+    /* padding: 10px; */
     border-top: 1px solid rgb(189, 171, 137);
     background-color: rgba(0, 0, 0, 0.6);
 }
@@ -187,7 +187,9 @@ a, a:visited{
 {
     font-size: 28px;
     margin-bottom: 5px;
-    border-bottom: 1px solid rgb(189, 171, 137);
+    background-color: wheat;
+    padding: 4px 10px;
+    color: black;
     display: inline-block;
     padding-bottom: 4px;
     text-transform: capitalize;
@@ -586,7 +588,6 @@ a, a:visited{
     display: inline-block;
 }
 
-
 .focus_project-close:hover, .focus_project-close:active
 {
     border-color: #fff;
@@ -608,14 +609,6 @@ a, a:visited{
 {
     display: table-cell;
 }
-
-.exp_table-location
-{
-    color: green;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-
 
 .focus_project-slider
 {

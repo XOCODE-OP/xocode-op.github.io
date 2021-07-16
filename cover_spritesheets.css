@@ -5,27 +5,27 @@
 
 .sprite-cover-2dgravityphysics {
 
-    background-position: 0 calc(0 + 25px);
+    background-position: 0 calc(0px + 25px);
 }
 
 .sprite-cover-alkahest {
 
-    background-position: -213px calc(0 + 25px);
+    background-position: -213px calc(0px + 25px);
 }
 
 .sprite-cover-amazons3-cover {
 
-    background-position: -426px calc(0 + 25px);
+    background-position: -426px calc(0px + 25px);
 }
 
 .sprite-cover-analytics {
 
-    background-position: -639px calc(0 + 25px);
+    background-position: -639px calc(0px + 25px);
 }
 
 .sprite-cover-audioplayer {
 
-    background-position: -852px calc(0 + 25px);
+    background-position: -852px calc(0px + 25px);
 }
 
 .sprite-cover-autoprice {
@@ -233,6 +233,26 @@
     background-position: 0 calc(25px - 1080px);
 }
 
+.sprite-cover-anubislink {
+
+    background-position: 0 calc(25px - 1200px);
+}
+
+.sprite-cover-clipsyne {
+
+    background-position: -213px calc(25px - 1200px);
+}
+
+.sprite-cover-chromeextension {
+
+    background-position: -426px calc(25px - 1200px);
+}
+
+.sprite-cover-simcheck {
+
+    background-position: -639px calc(25px - 1200px);
+}
+
 .sprite-cover-skirmish {
 
     background-position: -213px calc(25px - 1080px);
@@ -248,6 +268,12 @@
     background-position: -639px calc(25px - 1080px);
 }
 
+.sprite-cover-webscraper {
+
+    background-position: -852px calc(25px - 1200px);
+}
+
+
 .sprite-cover-stella {
 
     background-position: -852px calc(25px - 1080px);
@@ -255,7 +281,7 @@
 
 .sprite-cover-stockpic-cover {
 
-    background-position: -1065px calc(0 + 25px);
+    background-position: -1065px calc(0px + 25px);
 }
 
 .sprite-cover-surveysystem-cover {

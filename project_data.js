@@ -12,12 +12,12 @@ var projects = [
     bigimg: "bitcoinwallet_gui-big.jpg",
     bigimg2: "bitcoinwallet.jpg",
     desc: "This project is using Java and Swing for the GUI.<br /><br />" +
-    "Manage wallets, import a wallet, and" +
-    "create new ones. New incoming and outgoing transactions are shown in the GUI" +
-    "console. Balance is calculated. The program features a transaction list with full" +
+    "Manage wallets, import a wallet, and " +
+    "create new ones. New incoming and outgoing transactions are shown in the GUI " +
+    "console. Balance is calculated. The program features a transaction list with full " +
     "details. Manage addresses.<br /><br />" +
     "Send satoshi to a target address. All the basic functionality.",
-    group: "crypto"
+    group: "cryptocurrency / blockchain"
   },{
     title: "Bitcoin Java Module",
     minilabel: "Bitcoin Java Module",
@@ -34,7 +34,7 @@ var projects = [
     "- Print / See all transactions of a given wallet<br />"+
     "- Send coins to address<br />"+
     "- Get new addresses for your wallet<br />",
-    group: "crypto"
+    group: "cryptocurrency / blockchain"
   },{
     title: "Bitcoin NodeJS Lazy API",
     minilabel: "Bitcoin Lazy API",
@@ -49,7 +49,7 @@ var projects = [
     "<br />This code provides functionality to do anything one may want from blockchain data, however only read operations."+
     "<br />Check out blocks, addresses, transactions."+
     "<br />See confirmations, hashes, inputs, outputs, amounts and more.",
-    group: "crypto"
+    group: "cryptocurrency / blockchain"
   },{
     title: "Bitcoin C++ Connector",
     minilabel: "Bitcoin Connector",
@@ -61,7 +61,7 @@ var projects = [
     bigimg2: "btc_c_module2.png",
     desc: "This C++ codebase is meant for merchants, payment systems and other Bitcoin node operators.<br />"+
     "Sample on how to control a bitcoin node from C++ and send coins, view transaction, get balance, see all incoming transactions, see address specific incoming transactions (useful for payments) etc.",
-    group: "crypto"
+    group: "cryptocurrency / blockchain"
   },{
     title: "Ebisu - Cryptocurrency Trading Bot",
     minilabel: "Cryptocurrency Trading Bot",
@@ -75,7 +75,7 @@ var projects = [
     " the Bittex API. CLI only. <br />"+
     "It features basic trend and price analysis as well as a watchlist to give certain coins specific attention. And a blacklist to ignore some coins specifically, "+
     "even if the bot thinks that the trend shows an opportunity. I wrote this bot for fun, to see if I could scalp some volatility.",
-    group: "crypto"
+    group: "cryptocurrency / blockchain"
   },{
     title: "Android Crypto Portfolio App",
     minilabel: "Android Crypto App",
@@ -94,7 +94,7 @@ var projects = [
     "- Auto save and load to file<br />"+
     "- Calculation to USD value<br />"+
     "- Total amount calculation<br /><br />",
-    group: "crypto"
+    group: "cryptocurrency / blockchain"
   },
   {
     title: "Cryptocurrency Dashboard ",
@@ -111,19 +111,24 @@ var projects = [
     "- Cryptocurrency Graphs. Check the current charts for most crypto coins.<br />"+
     "- Cryptocurrency Converter. Convert from any into any crypto currency, dynamically.<br />"+
     "- Cryptocurrency Portfolio. Add holdings, make changes, add real balances from the blockchain and see the total value in USD.",
-    group: "crypto"
+    group: "cryptocurrency / blockchain"
   }, 
   {
-    title: "ANUBIS.LINK",
-    minilabel: "ANUBIS.LINK",
+    title: "ANUBIS LINK",
+    minilabel: "ERC20 Onchain Portfolio",
     proglang: "JavaScript Web3",
     tags: ["JavaScript", "HTML", "CSS", "Web3"],
     url: "http://anubis.link",
-    img: "missing.jpg",
-    bigimg: "missing.png",
-    bigimg2: "missing.png",
-    desc: `ye`,
-    group: "crypto"
+    img: "anubislink.jpg",
+    bigimg: "anubis1.png",
+    bigimg2: "anubis1.png",
+    desc: `An online portfolio client for ERC 20 tokens. <a href='http://anubis.link' target='_blank'>http://anubis.link</a><br />
+    Provide 1 or many ethereum addresses and this client returns a balance of every ERC 20 held by those addresses, along with their USD value and total portfolio values. <br />
+    Retrieving all ERC 20 balances held by an address, is not a trivial task, so much so that MetaMask still does not support it. <br />
+    One has to find all ERC 20 contracts and ask them all individually, technically. <br />
+    Binance and Matic/Polygon support experimental. (development halted, proof of concept only)
+    `,
+    group: "cryptocurrency / blockchain"
   }, 
 
   {
@@ -140,7 +145,7 @@ var projects = [
     "A number of videos and categories are provided via json library file. There is also a side bar menu.<br /><br />"+
     "Written in Javascript/HTML using ElectronJS, this can used to build your code natively for Windows, Mac and Linux as a desktop application. ",
     video: "https://www.youtube.com/embed/KJ4UWkKPOmk",
-    group: "electron desktop apps"
+    group: "electron"
   },
   {
     title: "LitSmart - Smart Text Editor",
@@ -158,20 +163,24 @@ var projects = [
     "and thereby manually start this process with the selected part.<br /><br />"+
     "Smart, Automatic, on the fly:<br /> Word Definitons<br /> Wikipedia<br /> Synonyms.",
     video: "https://player.vimeo.com/video/315198634",
-    group: "electron desktop apps"
+    group: "electron"
   },{
     title: "ClipSyne",
     minilabel: "Clipboard Manager",
     proglang: "Electron",
     tags: ["JavaScript", "HTML", "CSS", "Electron"],
     url: "https://github.com/XOCODE-OP/ClipSyne",
-    img: "missing.jpg",
-    bigimg: "missing.jpg",
-    bigimg2: "missing.jpg",
-    desc: "ClipSyne",
-    group: "electron desktop apps"
+    img: "clipsyne.jpg",
+    bigimg: "clipsyne1.jpg",
+    bigimg2: "clipsyne1.jpg",
+    desc: `Clipboard manager written using JavaScript and Electron JS. App starts out hidden. <br />
+    By hitten a specific globally registered hotkey combination, the menu in the screenshot will show up. This app records all clipboard copy events. 
+    All copied clipboards entries are shown in a list. The user can choose any entry from the list or search for entries. 
+    The selected entry will replace the current clipboard entry, so that the use can paste it outside the app.<br />
+    Uses sqlite3 as a database file to store the cliboard entries.`,
+    group: "electron"
   },{
-    title: "Smart Code Helper - AUTOMATIC code Suggestions",
+    title: "Smart Code Helper - automatic code suggestions",
     minilabel: "Code Editor",
     proglang: "Electron",
     tags: ["JavaScript", "HTML", "CSS", "Electron"],
@@ -181,9 +190,10 @@ var projects = [
     desc: "Smart Code Helper is a desktop app, using Electron, which is a code editor that automatically offers suggestions, "+
     "help and solutions to the developer while working.<br />Automatically, "+
     "the program will look at the current line of code and will search for suggestions online or the developer may select any "+
-    "part of the code and manually start this process with the selected part.",
+    "part of the code and manually start this process with the selected part.<br /><br />"+
+    "This was was made in 2018, long before Github CoPilot. The difference is this draws from stackoverflow instead github.",
     video: "https://player.vimeo.com/video/314468741",
-    group: "electron desktop apps"
+    group: "electron"
   },
   {
     title: "Music Player & Streaming - Electron App Template",
@@ -204,7 +214,7 @@ var projects = [
     "<br /><br />All of the basic functionality of such a music app are found here."+
     "<br />Of course this can be used for local files too instead of streaming, ideally both.",
     video: "https://www.youtube.com/embed/NFObQVqphGU",
-    group: "electron desktop apps"
+    group: "electron"
   },
   {
     title: "Password Manager  - Application Template",
@@ -221,7 +231,7 @@ var projects = [
     "These are stored encrypted as a json file, holding all the data.<br />Every entry has a title name and a text field for arbitrary notes.<br />"+
     "Encrypting is being done using AES.",
     video: "https://www.youtube.com/embed/xaNRz1B2dXc",
-    group: "electron desktop apps"
+    group: "electron"
   },
   {
     title: "Medical Clinic App",
@@ -237,7 +247,7 @@ var projects = [
     "Patient data, searchable via various data types.<br />Online ticket list.<br />"+
     "Staff database.<br />Automatic saving and loading of all data. ",
     video: "https://player.vimeo.com/video/351136064",
-    group: "electron desktop apps"
+    group: "electron"
   },
 
   {
@@ -245,9 +255,22 @@ var projects = [
     minilabel: "Chrome Extension",
     proglang: "JavaScript",
     tags: ["JavaScript", "HTML", "CSS"],
-    img: "missing.jpg",
-    bigimg: "missing",
-    desc: "Chrome extension",
+    img: "chromeextension.jpg",
+    bigimg: "cext1.jpg",
+    bigimg2: "cext2.jpg",
+    desc: "Created as a proof of concept for chrome extensions learning how to communicate both ways and integrate it.",
+    group: "other"
+  },
+  {
+    title: "Data Scraper Puppeteer",
+    minilabel: "Web Data Scraper",
+    proglang: "JavaScript",
+    tags: ["JavaScript", "HTML", "CSS"],
+    img: "webscraper.jpg",
+    bigimg: "webscraperscreen1.jpg",
+    bigimg2: "webscraperscreen1.jpg",
+    desc: `Using JavaScript Node JS package Puppeteer in order to scrape data from website with missing search function etc.<br />
+    Scraps data until all is collected, writes data continuesly to a sqlite3 database file, for easy use and to prevent data loss halfway through. `,
     group: "other"
   },
   
@@ -532,17 +555,17 @@ var projects = [
       title: "Code Base Analysis Tool",
       minilabel: "Code Analysis Program",
       tags: ["JavaScript", "NodeJS"],
-      img: "missing.jpg",
-      bigimg: "missing.jpg",
-      bigimg2: "missing.jpg",
+      img: "simcheck.jpg",
+      bigimg: "simcheck1.png",
+      bigimg2: "simcheck2.png",
       proglang: "NodeJS",
       subline: "Source Code Analysis Tool",
-      desc: "<p>TODO TODO TODO TODO TODO TODO TODO TODO This project scans code bases, compares them against other code bases and calculates a similarity score. "+
-      "It also generates a list of files and a list of functions for every source code file, supporting many programming languages.</p>"+
-      "<p>Runs on a webserver, responds to REST calls, uses AWS build. </p>"+
-      "<p>Techs used: C#, ASP .NET, React, Kestrel, AWS</p>",
+      desc: "<p>This project scans code bases, compares them against other code bases and calculates a similarity score. By filtering to relevant files and comparing them. "+
+      "It also generates meta data like project file types, lines of code, file size, and a unique code preview for every source code file, supporting many programming languages.</p>"+
+      "<p>Meta data is also used in compares but it's main use is to fascilitate a code previewer (web based, see screenshots). </p>"+
+      "<p>Techs used: NodeJS</p>",
       group: "other",
-      hightlight: true
+      highlight: true
     },
     {
       title: "EduForm - Learning Platform Template - JavaScript Single Page",
@@ -638,6 +661,7 @@ var projects = [
       minilabel: "Medical Pac-man Game",
       proglang: "C# Unity",
       bigimg2: "pac2.jpg",
+      video: "https://www.youtube.com/embed/T8pPwII1bDc",
       subline: "Tradeshow arcade style video game<br>PC using Unity3D<br>2017",
       desc: "<p>An arcade style video game that was made specifically for a medical tradeshow, featuring relevant devices.</p>" +
         "<p>It was produced on request and was used at a tradeshow in April 2017. It also featured a highscore system for a giveaway at the tradeshow." +

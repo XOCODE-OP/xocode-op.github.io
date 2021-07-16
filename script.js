@@ -39,6 +39,7 @@ var currentPage = "home";
 function hideFocusProject()
 {
     if ($(".focus_project").is(":hidden")) return;
+    $("iframe").remove();
     $(".focus_project *").animate({opacity: "0"}, PAGE_ANIMATION_DURATION/2, function(){
         $(".focus_project").hide();
     });
@@ -174,7 +175,7 @@ $( document ).ready(function()
     let _insert = "";
     for (const [groupname, projects] of Object.entries(project_groups))
     {
-        _insert = _insert + `<div class='skill-group' data-group='${groupname}'><h3>${groupname}:</h3><div class='skill-group-list' data-group='${groupname}'>`;
+        _insert = _insert + `<div class='skill-group' data-group='${groupname}'><h3>${groupname}</h3><div class='skill-group-list' data-group='${groupname}'>`;
         for (let x = 0; x < projects.length; x++)
         {
             if (!projects[x].proglang) projects[x].proglang = "";
