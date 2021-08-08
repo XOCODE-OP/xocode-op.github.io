@@ -118,11 +118,11 @@ var projects = [
     minilabel: "ERC20 Onchain Portfolio",
     proglang: "JavaScript Web3",
     tags: ["JavaScript", "HTML", "CSS", "Web3"],
-    url: "http://anubis.link",
+    url: "http://anubis.link/assets/",
     img: "anubislink.jpg",
     bigimg: "anubis1.png",
     bigimg2: "anubis1.png",
-    desc: `An online portfolio client for ERC 20 tokens. <a href='http://anubis.link' target='_blank'>http://anubis.link</a><br />
+    desc: `An online portfolio client for ERC 20 tokens. <a href='http://anubis.link/assets/' target='_blank'>http://anubis.link/assets/</a><br />
     Provide 1 or many ethereum addresses and this client returns a balance of every ERC 20 held by those addresses, along with their USD value and total portfolio values. <br />
     Retrieving all ERC 20 balances held by an address, is not a trivial task, so much so that MetaMask still does not support it. <br />
     One has to find all ERC 20 contracts and ask them all individually, technically. <br />
