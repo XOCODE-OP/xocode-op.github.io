@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'titillium';
+    src: url('TitilliumWeb-Regular.ttf') format('opentype');
+} 
+
+.crossnav
+{
+    background-color: #0b151f;
+    height: 45px;
+    margin: 0;
+    padding: 5px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+}
+
+.crossnav_button
+{
+    display: inline-block;
+    margin: auto;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding: 6px 22px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "titillium";
+    /* border: 1px solid rgb(12, 12, 12); */
+    color: rgb(191, 191, 191);
+    vertical-align: middle;
+    /* text-transform: uppercase; */
+    font-weight: 100;
+    border-radius: 10px;
+}
+
+.crossnav_button:hover, .crossnav_button_chosen
+{
+    /* border: 1px solid yellow; */
+    color: white;
+    background-color: rgb(65, 65, 65);
+}
+
+
+.crossnav_icon
+{
+    display: inline-block;
+    height: 45px;
+    width: auto;
+    margin-right: 30px;
+}
+
+.crossnav_title
+{
+    display: inline-block;
+    height: 45px;
+    width: auto;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.crossnav_bigimg
+{
+    visibility: visible;
+    transition: none;
+}
+
+.crossnav_smallimg
+{
+    visibility: hidden;
+    transition: none;
+}
+
+@media (max-width: 1040px)
+{
+    .crossnav_bigimg
+    {
+        visibility: hidden;
+    }
+
+    .crossnav_smallimg
+    {
+        visibility: visible;
+    }
+
+    .crossnav_icon
+    {
+        margin-right: 10px;
+    }
+
+    .crossnav_button
+    {
+        margin-left: 2px;
+        margin-right: 2px;
+        padding: 6px 10px;
+    }
+
+}
+
+
+@media (max-width: 570px)
+{
+
+    .crossnav_icon
+    {
+        margin-right: 0px;
+        height: 40px;
+    }
+
+    .crossnav_smallimg
+    {
+        visibility: hidden;
+    }
+
+    .crossnav
+    {
+        padding: 0;
+    }
+
+    .crossnav_button
+    {
+        margin: 0;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding: 6px 2px;
+        font-size: 14px;
+        border-radius: 0;
+        line-height: 200%;
+    }
+
+}

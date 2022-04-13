@@ -1,0 +1,23 @@
+//TODO:
+
+
+> add matic
+> add binance
+> redownload refresh json files
+> rename refactor
+> consolidate refactor into structs
+> CLEAN, simplify
+> mobile design
+
+Poll markets from coingecko
+https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=decentralized_finance_defi&order=market_cap_desc&per_page=200&page=1&sparkline=false
+
+contracts addresses can be found in the uniswap list (all_tokens)
+https://tokens.coingecko.com/uniswap/all.json
+
+https://api.etherscan.io/api?module=account&action=tokentx&address=0x187f899fcBd0cb2C23Fc68d6339f766814D9dDeb&startblock=0&endblock=999999999&sort=asc&apikey=7AQ3713SDIIEK2TMI5ZS9W4IB6YFBFF1QZ
+
+
+
+
+

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANUBIS LINK - ERC20 Showcase</title>
+
+    
+    <style>
+        @font-face {
+            font-family: 'titillium';
+            src: url('TitilliumWeb-Regular.ttf') format('opentype');
+        } 
+
+        *{
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-smooth: always;
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea,html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],button[disabled],
+        html input[disabled],button::-moz-focus-inner,
+        input::-moz-focus-inner, input[type="checkbox"],
+        input[type="radio"], input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button, input[type="search"], input[type="search"]::-webkit-search-cancel-button,
+        input[type="search"]::-webkit-search-decoration
+        {
+            border:none;
+            background-image:none;
+            background-color:transparent;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+
+        body
+        {
+            font-family: 'titillium';
+            /* background: linear-gradient(to right, #414345, #232526);  */
+            background: linear-gradient(to right, #0e182c, #243764);
+            font-weight: 100;
+            /* color: rgb(221, 221, 188); */
+            color: #EEE;
+        }
+
+        a
+        {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        a:hover
+        {
+            color: orange;
+            text-decoration: none;
+        }
+
+        @keyframes loader_spin
+        {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .content_inner
+        {
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .loader
+        {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0, 0.6);
+            width: 100%;
+            height: 100%;
+        }
+        .loader-gfx
+        {
+            border: 16px solid rgba(255,255,255,0.2); 
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 3rem;
+            aspect-ratio: 1.0;
+            animation: loader_spin 1200ms linear infinite;
+        }
+
+        .box
+        {
+            vertical-align: top;
+
+            text-align: center;
+            min-width: 300px;
+            max-width: 500px;
+            margin: 20px;
+            display: inline-block;
+            position: relative;
+            font-size: 20px;
+            box-shadow: 0px 0px 3px 1px orange;
+        }
+
+        .box>p, .box>a
+        {
+            margin: 6px;
+        }
+
+        button
+        {
+            font-size: 22px;
+        }
+
+        .box-title
+        {
+            font-family: 'titillium';
+            font-weight: 500;
+            font-size: 32px;
+            text-transform: uppercase;
+        }
+
+        .error
+        {
+            color: rgb(231, 100, 100);
+            visibility: hidden;
+        }
+
+        .success
+        {
+            color: rgb(53, 180, 47);
+            visibility: hidden;
+        }
+
+        input
+        {
+            font-family: 'titillium';
+            font-weight: 100;
+            font-size: 22px;
+            color: white;
+            background-color: rgb(33, 33, 33);
+            padding: 2px 6px;
+            border: 1px solid transparent;
+            margin: 2px auto;
+            display: block;
+            width: 86%;
+        }
+
+        input:hover
+        {
+            border-color: white; 
+        }
+
+        input:active, input:focus
+        {
+            border-color: orange;   
+        }
+
+        input::placeholder
+        {
+            color: grey;
+        }
+
+        .tilebutton
+        {
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+            font-size: 22px;
+            padding: 16px 30px;
+            margin: 5px 10px;
+            cursor: pointer;
+            user-select: none;
+            color: rgb(203, 211, 211);
+            background-color: rgb(20, 63, 78);
+            border: 1px solid transparent;
+        }
+
+        .tilebutton:hover
+        {
+            /* filter: invert(); */
+            /* filter: contrast(2.1); */
+            /* filter: brightness(2.0); */
+            color: rgb(255, 255, 255);
+            background-color: rgb(41, 123, 153);
+        }
+
+        .tilebutton:active
+        {
+            /* filter: invert(); */
+            /* filter: contrast(2.1); */
+            /* filter: brightness(2.0); */
+            color: orange;
+            background-color: rgb(21, 23, 24);
+            border-color: orange;
+            transition: all 1ms ease;
+        }
+
+        .tilebutton.smalltilebutton:hover
+        {
+            background-color: wheat;
+            color: black;
+        }
+
+        .content
+        {
+            text-align: left;
+        }
+
+        .table
+        {
+            display: table;
+            margin: 10px;
+            width: calc(100% - 20px);
+        }
+
+        .tableval
+        {
+            text-align: right;
+            padding-left: 20px;
+        }
+
+        .addressellipsis
+        {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 120px;
+        }
+
+        .logo
+        {
+            
+        }
+
+        .blocklist > *
+        {
+            display: block;
+        }
+
+        h1, h2, h3, h4
+        {
+            background-color: #111;
+            margin-bottom: 10px;
+        }
+
+        .box section h4
+        {
+            font-size: 20px;
+        }
+
+        .box section
+        {
+            margin-top: 20px;
+            padding: 10px 0px;
+            padding-top: 0;
+            background-color: rgba(28, 28, 28, 0.8);
+        }
+
+        .highlight
+        {
+            color: yellow;
+        }
+
+        .statusok
+        {
+            color: rgb(53, 180, 47);
+        }
+
+        .warning
+        {
+            color:rgb(255, 99, 99);
+        }
+
+        .address
+        {
+            text-overflow: ellipsis;
+            width: 50px;
+        }
+
+
+    </style>
+
+    <link href="../cross_nav.css" rel="stylesheet"  />
+    <script src='../web3.min.js'></script>
+    <script src='./coin.js'></script>
+</head>
+<body>
+
+    <div class='crossnav'>
+        <img class='crossnav_icon' src='../img/nav_icon.png' />
+        <a href='../' class='crossnav_button'>Start</a>
+        <a href='../assets/' class='crossnav_button' data-link='assets'>Assets</a>
+        <a href='../nft/' class='crossnav_button' data-link='nft'>NFT</a>
+        <!-- <a href='../ipfs/' class='crossnav_button' data-link='ipfs'>IPFS</a> -->
+        <a href='../coin/' class='crossnav_button crossnav_button_chosen' data-link='coin'>Coin</a>
+        <a href='../game/' class='crossnav_button' data-link='game'>Game</a>
+        <img class='crossnav_title crossnav_bigimg' src='../img/nav_title.png' />
+        <img class='crossnav_title crossnav_smallimg' src='../img/nav_title_small.png' />
+    </div>
+
+
+    <div class='content_inner'>
+
+        <div>
+
+            <article class='box '>
+                <h3 class='box-title'>INSTRUCTIONS</span></h3>
+                <p>This DApp is a technology showcase. The ERC20 (SENO) is depolyed on the Ethereum Rinkeby Testnet.<br />
+                    In order to interact with this DApp, <a href='https://metamask.io/' target='_blank'>Metamask</a> is used.<br/>
+                    Your wallet will require Rinkeby Ethereum to pay gas fees. Use the <a href='https://faucet.rinkeby.io' target='_blank'>Rinkeby faucet at https://faucet.rinkeby.io</a> to get free Ethereum. </p>
+            </article>
+    
+            <br />
+            
+            <article class='box walletbox'>
+                <h3 class='box-title'>Your holdings</h3>
+                <div class='content table'>
+                    <div style='display: table-row;'>
+                        <div style='display: table-cell;'>Wallet Address:</div>
+                        <div style='display: table-cell;' class='tableval walletaddress addressellipsis'></div>
+                    </div>
+                    <div style='display: table-row;'>
+                        <div style='display: table-cell;'>Balance:</div>
+                        <div style='display: table-cell;' class='tableval balanceamount'></div>
+                    </div>
+                    <div style='display: table-row;'>
+                        <div style='display: table-cell;'>Contract Spending Allowance:</div>
+                        <div style='display: table-cell;' class='tableval approvedamount'></div>
+                    </div>
+                    <div style='display: table-row;'>
+                        <div style='display: table-cell;'>Amount Staked:</div>
+                        <div style='display: table-cell;' class='tableval staking_balance'></div>
+                    </div>
+                </div>
+                <div class='tilebutton butAddMyTokenToMetamask' onclick='addMyTokenToMetamask();'>Add TOKENNAME Token to Metamask</div>
+                <div class="loader"><div class="loader-gfx"></div></div>
+            </article>
+
+        </div>
+
+        
+
+        
+        <div>
+
+            <article class='box networkbox'>
+                <h3 class='box-title'>contract</h3>
+                <div class='content table'>
+                    <div style='display: table-row;'>
+                        <div style='display: table-cell;'>Network:</div>
+                        <div style='display: table-cell;' class='tableval networkbox-id'></div>
+                    </div>
+                    <div style='display: table-row;'>
+                        <div style='display: table-cell;'>Symbol:</div>
+                        <div style='display: table-cell;' class='tableval networkbox-symbol'></div>
+                    </div>
+                    <div style='display: table-row;'>
+                        <div style='display: table-cell;'>Total Supply:</div>
+                        <div style='display: table-cell;' class='tableval networkbox-totalsupply'></div>
+                    </div>
+                    <div style='display: table-row;'>
+                        <div style='display: table-cell;'>Contract Paused:</div>
+                        <div style='display: table-cell;' class='tableval networkbox-paused'></div>
+                    </div>
+                </div>
+                <div class='success'></div>
+                <div class='error'></div>
+                <div class="loader"><div class="loader-gfx"></div></div>
+                <div class='tilebutton networkchanger' onclick="requestRinkebyNetwork();" >Switch to Rinkeby</div>
+            </article>
+
+            <br />
+
+            <article class='box stakingbox'>
+                <h3 class='box-title'>Staking</span></h3>
+                <div>
+                    <input type='text' class='dataamount' placeholder="staking amount" />
+                    <div class='tilebutton sendbutton' onclick='stakeMe();'>stake</div>
+                    <div class='tilebutton sendbutton' onclick='unstakeMe();'>unstake</div>
+                </div>
+    
+                <div class="loader"><div class="loader-gfx"></div></div>
+            </article>
+
+            <br />
+
+            <article class='box functionbox'>
+                <h3 class='box-title'>Coin Functions</span></h3>
+                <div class='tilebutton' onclick="contractInteraction_togglePause();">Pause Contract</div>
+                <section class='section_approve'>
+                    <input type='text' class='dataamount' placeholder="1.0" />    
+                    <div class='tilebutton' onclick='approveMe();'>Approve</div>
+                </section>
+                <section class='section_mint'>
+                    <input type='text' class='dataamount' placeholder="1.0" />    
+                    <div class='tilebutton' onclick='mintMe();'>Mint</div>
+                </section>
+                <section class='section_burn'>
+                    <input type='text' class='dataamount' placeholder="1.0" />    
+                    <div class='tilebutton' onclick='burnMe();'>Burn</div>
+                </section>
+                <div class="loader"><div class="loader-gfx"></div></div>
+            </article>
+
+        </div>
+       
+
+        <div>
+
+            <article class='box auxbox'>
+                <h3 class='box-title'>Auxiliary Functions</h3>
+                <section class='section_signproof'>
+                    <h4>Sign to prove ownership</h4>
+                    <div class='tilebutton' onclick='auxSignProof();'>Sign</div>
+                    <div class='error'></div>
+                    <div class='success'></div>
+                </section>
+                <section class='section_blockchain_sendmessage'>
+                    <h4>Send message on blockchain</h4>
+                    <p>Using blockchain to chat or to make statements, stamping a message into the blockchain:</p>
+                    <input type='text' class='datasendtoaddress' placeholder="Send To address" />
+                    <!-- <input type='text' class='dataamount' placeholder="1.0 ETH" /> -->
+                    <input type='text' class='datamessage' placeholder="Message" />
+                    <div class='tilebutton' onclick='auxBlockchainMessage();'>send</div>
+                    <div class='info'>
+                        <div class='blockchain_sendmessage-tx'></div>
+                        <u>How to read:</u> Scroll down to Input Data, switch view input to UTF8 and you will be able to see and read the message written to the blockchain.
+                    </div>
+                </section>
+                <section class=''>
+                    <h4>Request Metamask to change network</h4>
+                    <div class='tilebutton' onclick='auxAddNetwork();'>Add network to metamask</div>
+                    <div class='error'></div>
+                </section>
+                <div class="loader"><div class="loader-gfx"></div></div>
+            </article>
+    
+            <br />
+    
+            <article class='box logbox'>
+                <h3 class='box-title'>CONTRACT EVENT LOGS</span></h3>
+                <div class='content'>
+    
+                </div>
+            </article>
+
+        </div>
+        
+
+    </div>
+    
+
+</body>
+</html>

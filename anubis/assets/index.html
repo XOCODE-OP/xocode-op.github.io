@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="../img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#000000">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="mobile.css">
+    <title>ANUBIS LINK - ASSETS</title>
+    <script src='../web3.min.js'></script>
+    <!-- <script src='./o.js'></script> -->
+	<script src='./portfolio.js'></script>
+    <link href="../cross_nav.css" rel="stylesheet"  />
+</head>
+<body>
+
+    <div class='crossnav'>
+        <img class='crossnav_icon' src='../img/nav_icon.png' />
+        <a href='../' class='crossnav_button'>Start</a>
+        <a href='../assets/' class='crossnav_button crossnav_button_chosen' data-link='assets'>Assets</a>
+        <a href='../nft/' class='crossnav_button' data-link='nft'>NFT</a>
+        <!-- <a href='../ipfs/' class='crossnav_button' data-link='ipfs'>IPFS</a> -->
+        <a href='../coin/' class='crossnav_button' data-link='coin'>Coin</a>
+        <a href='../game/' class='crossnav_button' data-link='game'>Game</a>
+        <img class='crossnav_title crossnav_bigimg' src='../img/nav_title.png' />
+        <img class='crossnav_title crossnav_smallimg' src='../img/nav_title_small.png' />
+    </div>
+    <br/>
+
+    <div class='leftcol'  >
+
+        <!-- <div class='title' ></div> -->
+
+        <div class='inputarea'>
+            <p>Input address:</p>
+            <div class='address_list'>
+                <div class='address_div'>
+                    <span class='minus_address_icon' style='visibility: hidden'></span>
+                    <input type='text' placeholder="0x..." value="" class='inpaddress' onClick="this.setSelectionRange(0, this.value.length);"  />
+                    <button class='btn_metamask' ></button>
+                </div>
+                <div class='newaddresslink'>Add address</div>
+            </div>
+            <div class="input_buttons">
+                <button id='btn_main_check' >Loading...</button>
+            </div>
+        </div>
+
+        <div class='sample_addrs'>
+            <h4 class='samples_header'>Sample Addresses</h4>
+            
+            <div class='samples'>
+                <a href='#' data-addr="0x7eb11d64f15d1f20b833cb44c2b6c9c36ba63dc6">0x7eb11d64f15d1f20b833cb44c2b6c9c36ba63dc6</a>
+                <a href='#' data-addr="0xae7135150d43e6781D4580B8731cB5Aae3c8532b">0xae7135150d43e6781D4580B8731cB5Aae3c8532b</a>
+                <a href='#' data-addr="0x6003D144C99CC18125571D04853F455EA4E794EB">0x6003D144C99CC18125571D04853F455EA4E794EB</a>
+                <a href='#' data-addr="0x7B6Dd7246DED32265abFc7813d76e5c5da554129">0x7B6Dd7246DED32265abFc7813d76e5c5da554129</a>
+                <a href='#' data-addr="0xafF33b887aE8a2Ab0079D88EFC7a36eb61632716">0xafF33b887aE8a2Ab0079D88EFC7a36eb61632716</a>
+            </div>
+        </div>
+
+        <div class='special_nopadding eth_gas_box'>
+            <div class="gasheader">Current Ethereum Mainnet Gas Prices</div>
+            <!-- yo remove this url from the freaking html -->
+            <div class='gasrow' data-ss='https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=7AQ3713SDIIEK2TMI5ZS9W4IB6YFBFF1QZ'>
+                <div class='cheapgas'>
+                    Slow <span class='gas'></span>
+                </div>
+                <div class='modgas'>
+                    Normal <span class='gas'></span>
+                </div>
+                <div class='fastgas'>
+                    Fast <span class='gas'></span>
+                </div>
+            </div>
+            <div class='uniswapcost'>
+                Average Uniswap Cost <span class='gas' style=""></span> $
+            </div>
+            <div class="loader"><div class="loader-gfx"></div></div>
+        </div>
+
+        <div class='swap_container'>
+            <a name='trade'></a>
+            <iframe id='trade_iframe' src=""></iframe>
+        </div>
+
+    </div>
+
+    <div class='maincolumn eth_gradient'>
+
+        <div class='nowloading'>
+            <span>Building  Portfolio</span><div class="loadingio-spinner-eclipse-f1acnqblv1t"><div class="ldio-v3xoc9chw0a">
+                <div></div>
+                </div></div>
+        </div>
+
+        <div class='cross_chain-container'>
+
+            <div class='whichaddress'></div>
+
+            <div class='cross_chain_total'>
+                <div class='cross_chain_total-crypto'>
+                    <div class='cross_chain_total-btc'></div>
+                    <div class='cross_chain_total-eth'></div>
+                </div>
+                <div class='cross_chain_total-usd'></div>
+            </div>
+
+            <div class='token_container'>
+                    <div class='content content_eth' data-chain='eth'>
+                        <div data-chain='eth' class="chainbutton">
+                            <span class='chainbutton_eth'>ETHEREUM</span>
+                        </div>
+                        <h1>Tokens will appear here</h1>
+                        <div class='totaldiv' data-chain='eth'>
+                            <div class='coin_vals'>
+                                <div class='tot_btcv'></div>
+                                <div class='tot_ethv'></div>
+                            </div>
+                            <div class='totaldiv-val'>$0</div>
+                        </div>
+                        
+                        <div class='tokenp'>
+                            <div class='tokenp_left'>
+                                <div class='tokenicon' ></div>
+                                <div class='tokenp_text'>
+                                    <div class='tokenname'>base</div>
+                                    <div class='tokendetails'></div>
+                                </div>
+                            </div>
+                            <div class='tokenp_right'>
+                                <div class='value_totals'>
+                                    <div>
+                                        <div class='btc_value'>0</div>
+                                        <div class='eth_value'>0</div>
+                                    </div>
+                                    <div class='usdchange'> %</div><div class='usd_value' data-val='0'>0</div>
+                                </div>
+                                <div class="coin_holdings">
+                                    <div class='token_total'>0</div>
+                                    <div class='perc'>? %</div>
+                                </div>
+                            </div>
+                            <div class='token_action_bar'>
+                                <div class='token_action_but token_action_but_explorer'>Explorer</div>
+                                <div class='token_action_but token_action_but_swap'>Swap</div>
+                            </div>
+                        </div>
+                        <div class="loader"><div class="loader-gfx"></div></div>
+                    </div>
+                <div >
+                    <div class='content content_bsc' data-chain='bsc' >
+                        <div data-chain='bsc' class="chainbutton">
+                            <span class='chainbutton_bsc'>BINANCE</span>
+                        </div>
+                        <div class='smalltotaldiv' data-chain='bsc'>
+                            <div class='smalltotaldiv-coinvals'>
+                                <div class='smallttot_btcv'></div>
+                                <div class='smallttot_ethv'></div>
+                            </div>
+                            <div class='smalltotaldiv-usdtotal'></div>
+                        </div>
+
+                            <div class="smalltoken">
+                                <div class='tokenicon' >TST</div>
+                                <div class='smalltoken-content'>
+                                    <div class='smalltoken-name'>Contract Name</div>
+                                    <div class='smalltoken-values'>
+                                        <span class='smalltoken-usd'>$433</span>
+                                        <span class='smalltoken-coins'> [ 99 TST ] </span>
+                                    </div>
+                                </div>
+                                <div class='token_action_bar' style='display: flex; flex-direction: column;'>
+                                    <div class='token_action_but token_action_but_explorer'>Explorer</div>
+                                    <div class='token_action_but token_action_but_swap'>Swap</div>
+                                </div>
+                            </div>
+                        
+                        <div class="loader"><div class="loader-gfx"></div></div>
+                    </div>
+                    <div class='content content_polygon' data-chain='polygon'>
+                        <div data-chain='polygon' class="chainbutton">
+                            <span class='chainbutton_polygon'>POLYGON</span>
+                        </div>
+                        <div class='smalltotaldiv' data-chain='polygon'>
+                            <div class='smalltotaldiv-coinvals'>
+                                <div class='smallttot_btcv'></div>
+                                <div class='smallttot_ethv'></div>
+                            </div>
+                            <div class='smalltotaldiv-usdtotal'></div>
+                        </div>
+                        <div class="loader"><div class="loader-gfx"></div></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
+    <div class='splashscreen'>
+
+    </div>
+   
+
+    <script>
+
+        
+
+    </script>
+
+</body>
+</html>
