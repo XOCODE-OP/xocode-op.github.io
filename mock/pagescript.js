@@ -1,45 +1,32 @@
+// jshint esversion: 11
 
-function getDataAsJson(_generate, _i)
+const LOCAL_STORAGE_KEY = "MOCKR";
+
+function saveToStorage(data)
 {
-    if ($("#labelcheck").is(":checked"))
+    // console.trace();
+    if (!data)
     {
-        let pairs = {};
-        $(".q-input-cont").each(function()
-        {
-            let _key = $(this).find(".text-cont[data-type='label'] input").val();
-            let _value = "";
-            if (_generate)
-            {
-                let _type = $(this).find(".gen_data_select").val();
-                if (_type != "inc_id")
-                    _value = generateData(_type);
-                else
-                    _value = _i.toString();
-            }
-            else
-            {
-                _value = $(this).find(".text-cont[data-type='output'] input").val();
-            }
-            pairs[_key] = _value;
-        });
-        return pairs;
+        console.log("saveToStorage ABORTED because data is", data);
+        return;
+    }
+    // console.log("saveToStorage()", data);
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data));
+}
+
+function loadFromStorage()
+{
+    let _datastr = localStorage.getItem(LOCAL_STORAGE_KEY);
+    // console.log("raw load", _datastr);
+    if (!_datastr || _datastr === undefined || _datastr == "undefined") // literally the string saying undefined due to previous saving error
+    {
+        console.log("no storage");
+        return null;
     }
     else
     {
-        let arro = [];
-        $(".q-input-cont").each(function()
-        {
-            if (_generate)
-            {
-                let _type = $(this).find(".gen_data_select").val();
-                arro.push( generateData(_type) );
-            }
-            else
-            {
-                arro.push( $(this).find(".text-cont[data-type='output'] input").val() );
-            }
-        });
-        return arro;
+        console.log("loadFromStorage", _datastr, typeof _datastr, _datastr.length);
+        return JSON.parse(_datastr);
     }
 }
 
@@ -55,60 +42,63 @@ function generateRowsAsJson(_rows)
 
 function generateData(_type)
 {
-    if (_type == "fullname")                return SDG.fullName();
-    else if (_type == "lastname")           return SDG.lastName();
-    else if (_type == "firstname")          return SDG.firstName();
-    else if (_type == "digit")              return SDG.digit().toString();
-    else if (_type == "digits")             return SDG.digits(20).toString();
-    else if (_type == "job")                return SDG.job();
-    else if (_type == "honorific")          return SDG.honorific();
-    else if (_type == "sentence")           return SDG.placeholderTextSentence();
-    else if (_type == "paragraph")          return SDG.placeholderTextParagraph();
-    else if (_type == "boolean")            return SDG.boolean();
-    else if (_type == "allspecialchars")    return SDG.charAnyMulti(20);
-    else if (_type == "lowchars")           return SDG.charLowerMulti(20);
-    else if (_type == "upperchars")         return SDG.charUpperMulti(20);
-    else if (_type == "lowernumberchars")   return SDG.charLowerNumberMulti(20);
-    else if (_type == "uppernumberchars")   return SDG.charUpperNumberMulti(20);
-    else if (_type == "upperlowernumberchars")    return SDG.charUpperLowerNumberMulti(20);
-    else if (_type == "lowernumberspecialchars")  return SDG.charLowerNumberSpecialMulti(20);
-    else if (_type == "uppernumberspecialchars")  return SDG.charUpperNumberSpecialMulti(20);
-    else if (_type == "decimal")            return SDG.decimal(0, 9, 16);
-    else if (_type == "fraction")           return SDG.fraction();
-    else if (_type == "unixtime")           return SDG.unixtime().toString();
-    else if (_type == "email")              return SDG.email();
-    else if (_type == "nickname")           return SDG.nickName();
-    else if (_type == "url")                return SDG.url();
-    else if (_type == "ipv4")               return SDG.ipv4();
-    else if (_type == "useragent")          return SDG.userAgent();
-    else if (_type == "hexcolor")           return SDG.hexColor();
-    else if (_type == "macaddress")         return SDG.macAddress();
-    else if (_type == "uuid")               return SDG.uuid();
-    else if (_type == "phonenumber")        return SDG.phoneNumber();
-    else if (_type == "moneyamount")        return SDG.moneyAmount();
-    else if (_type == "currencysymbol")     return SDG.currencySymbol();
-    else if (_type == "currencycode")       return SDG.currencyCode();
-    else if (_type == "currencyname")       return SDG.currencyName();
-    else if (_type == "color")              return SDG.color();
-    else if (_type == "city")               return SDG.city();
-    else if (_type == "country")            return SDG.country();
-    else if (_type == "countrycode")        return SDG.countryCode();
-    else if (_type == "longitude")          return SDG.longitude();
-    else if (_type == "latitude")           return SDG.latitude();
-    else if (_type == "address")            return SDG.address();
-    else if (_type == "detailedaddress")    return SDG.detailedAddress();
-    else if (_type == "month")              return SDG.month();
-    else if (_type == "weekdayname")        return SDG.weekdayName();
-    else if (_type == "operatingsystem")    return SDG.operatingSystem();
-    else if (_type == "isp")                return SDG.isp();
-    else if (_type == "browser")            return SDG.browser();
-    else if (_type == "screensize")         return SDG.screenSize();
+    if (_type == "fullname")                return Mockr.fullName();
+    else if (_type == "lastname")           return Mockr.lastName();
+    else if (_type == "firstname")          return Mockr.firstName();
+    else if (_type == "digit")              return Mockr.digit();
+    else if (_type == "digits")             return Mockr.digits(20);
+    else if (_type == "job")                return Mockr.job();
+    else if (_type == "inc_id")             return 0;
+    else if (_type == "honorific")          return Mockr.honorific();
+    else if (_type == "sentence")           return Mockr.placeholderTextSentence();
+    else if (_type == "paragraph")          return Mockr.placeholderTextParagraph();
+    else if (_type == "boolean")            return Mockr.boolean();
+    else if (_type == "allspecialchars")    return Mockr.charAnyMulti(20);
+    else if (_type == "lowchars")           return Mockr.charLowerMulti(20);
+    else if (_type == "upperchars")         return Mockr.charUpperMulti(20);
+    else if (_type == "lowernumberchars")   return Mockr.charLowerNumberMulti(20);
+    else if (_type == "uppernumberchars")   return Mockr.charUpperNumberMulti(20);
+    else if (_type == "upperlowernumberchars")    return Mockr.charUpperLowerNumberMulti(20);
+    else if (_type == "lowernumberspecialchars")  return Mockr.charLowerNumberSpecialMulti(20);
+    else if (_type == "uppernumberspecialchars")  return Mockr.charUpperNumberSpecialMulti(20);
+    else if (_type == "decimal")            return Mockr.decimal(0, 9, 16);
+    else if (_type == "fraction")           return Mockr.fraction();
+    else if (_type == "unixtime")           return Mockr.unixtime();
+    else if (_type == "email")              return Mockr.email();
+    else if (_type == "nickname")           return Mockr.nickName();
+    else if (_type == "url")                return Mockr.url();
+    else if (_type == "ipv4")               return Mockr.ipv4();
+    else if (_type == "useragent")          return Mockr.userAgent();
+    else if (_type == "hexcolor")           return Mockr.hexColor();
+    else if (_type == "macaddress")         return Mockr.macAddress();
+    else if (_type == "uuid")               return Mockr.uuid();
+    else if (_type == "phonenumber")        return Mockr.phoneNumber();
+    else if (_type == "moneyamount")        return Mockr.moneyAmount();
+    else if (_type == "currencysymbol")     return Mockr.currencySymbol();
+    else if (_type == "currencycode")       return Mockr.currencyCode();
+    else if (_type == "currencyname")       return Mockr.currencyName();
+    else if (_type == "color")              return Mockr.color();
+    else if (_type == "city")               return Mockr.city();
+    else if (_type == "country")            return Mockr.country();
+    else if (_type == "countrycode")        return Mockr.countryCode();
+    else if (_type == "longitude")          return Mockr.longitude();
+    else if (_type == "latitude")           return Mockr.latitude();
+    else if (_type == "address")            return Mockr.address();
+    else if (_type == "detailedaddress")    return Mockr.detailedAddress();
+    else if (_type == "month")              return Mockr.month();
+    else if (_type == "weekdayname")        return Mockr.weekdayName();
+    else if (_type == "operatingsystem")    return Mockr.operatingSystem();
+    else if (_type == "isp")                return Mockr.isp();
+    else if (_type == "browser")            return Mockr.browser();
+    else if (_type == "screensize")         return Mockr.screenSize();
+    return null;
 }
 
 function downloadObjectAsJson(exportObj, exportName)
 {
-    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj, null, 2));
-    var downloadAnchorNode = document.createElement('a');
+    console.log("downloadObjectAsJson", exportObj, exportName);
+    let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj, null, 2));
+    let downloadAnchorNode = document.createElement('a');
     downloadAnchorNode.setAttribute("href",     dataStr);
     downloadAnchorNode.setAttribute("download", exportName);
     document.body.appendChild(downloadAnchorNode); // required for firefox
@@ -118,7 +108,7 @@ function downloadObjectAsJson(exportObj, exportName)
 
 function downloadGeneric(dataStr, exportName)
 {
-    var downloadAnchorNode = document.createElement('a');
+    let downloadAnchorNode = document.createElement('a');
     downloadAnchorNode.setAttribute("href",     dataStr);
     downloadAnchorNode.setAttribute("download", exportName);
     document.body.appendChild(downloadAnchorNode); // required for firefox
@@ -154,429 +144,154 @@ function convertOutDataTypeToSQLtype(_type)
     }
 }
 
-function checkIfSqlExportIsGo()
+function exportRowsAsCSV(useIdentifiers, fields, rownum)
 {
-    if ($("#sql_table").val().length > 0)
+    if (rownum < 1) return;
+
+    let muhjson = exportRowsAsJSON(useIdentifiers, fields, rownum);
+
+    let csvContent = "data:text/csv;charset=utf-8,"; //for browser download function to work
+
+    let labels = null;
+    if (useIdentifiers)
     {
-        if ($("#labelcheck").is(":checked"))
+        labels = [];
+        for (let key in muhjson[0])
         {
-            $(".sqlbuttons").show()
-            return;
+            if (muhjson[0].hasOwnProperty(key))
+            {           
+                labels.push(key);
+                csvContent += "\"" + key + "\"";
+                csvContent += ",";
+            }
         }
-    }
-    $(".sqlbuttons").hide();
-}
+        csvContent = csvContent.substring(0, csvContent.length - 1) + "\r\n";
 
-function getConfigJson()
-{
-    let config = {};
-    config.rows = [];
-    if ($("#labelcheck").is(":checked")) 
-    {
-        config.labels = true;
-
-        $(".q-input-cont").each(function()
+        for (let r = 0; r < muhjson.length; r++)
         {
-            let row = {};
-            row.label = $(this).find(".text-cont[data-type='label'] input").val();
-            row.type  = $(this).find(".gen_data_select").val();
-            row.value = $(this).find(".text-cont[data-type='output'] input").val();
-            config.rows.push(row);
-        });
+            for (let i = 0; i < labels.length; i++)
+            {
+                let e = ""+muhjson[r][labels[i]];
+                if (e.includes("'")) e = e.split("'").join(" ");
+                if (e.includes(",")) e = e.split(",").join(" ");
+                csvContent += e + ",";
+            }
+            csvContent = csvContent.substring(0, csvContent.length - 1) + "\r\n";
+        }
     }
     else
     {
-        $(".q-input-cont").each(function()
+        for (let r = 0; r < muhjson.length; r++)
         {
-            let row = {};
-            row.type = $(this).find(".gen_data_select").val();
-            row.value = $(this).find(".text-cont[data-type='output'] input").val();
-            config.rows.push(row);
-        });
+            let ro = muhjson[r];
+            for (let fi = 0; fi < ro.length; fi++)
+            {
+                let e = ""+ro[fi];
+                if (e.includes("'")) e = e.split("'").join(" ");
+                if (e.includes(",")) e = e.split(",").join(" ");
+                csvContent += e + ",";
+            }
+            csvContent = csvContent.substring(0, csvContent.length - 1) + "\r\n";
+        }
     }
-    return config;
+
+    return csvContent;
 }
 
-function buildUIFromConfig(config)
+function exportRowsAsJSON(useIdentifiers, fields, rownum)
 {
-    if (!config.rows || config.rows.length < 1) return;
-
-    $("#labelcheck").prop("checked", config.labels);
-    $(".text-cont[data-type='label']").attr("data-active", ""+config.labels);
-    if (config.labels == true)  $(".text-cont[data-type='label']").show();
-    else                        $(".text-cont[data-type='label']").hide();
-
-    //load should be called on document ready
-    //at this point we should have one row, the base
-    //the previous code will set the label up
-    for (let i = 0; i < config.rows.length; i++)
+    if (rownum < 1) return;
+    let outobj = [];
+    if (useIdentifiers)
     {
-        let e = config.rows[i];
-
-        let he = $( ".q-input-cont:eq("+i+")" );
-        if (config.labels == true) he.find("input[name='txt_label']").val(""+e.label).change().click();
-        he.find("input[name='output']").val(""+e.value).change().click();
-        if (e.value.length > 0)     he.find("span").addClass('hoverlabel-lock');
-        he.find(".gen_data_select").val(""+e.type).change();
-        
-        if (i < config.rows.length -1)
-            $( ".q-input-cont:last-of-type" ).clone(true).appendTo( ".list-of-fields" );
-    }
-    
-    checkIfSqlExportIsGo();
-}
-
-function saveToStorage()
-{
-    let _data = getConfigJson();
-    localStorage.setItem("mockr_config", JSON.stringify(_data));
-}
-
-function loadFromStorage()
-{
-    let _datastr = localStorage.getItem("mockr_config");
-    let _data = JSON.parse(_datastr);
-    buildUIFromConfig(_data);
-}
-
-function toggleLabelCheck()
-{
-    if ($("#labelcheck").is(":checked"))
-    {
-        $(".text-cont[data-type='label']").show();
-        $(".text-cont[data-type='label']").attr("data-active", "true");
-    }
-    else if (!$("#labelcheck").is(":checked"))
-    {
-        $(".text-cont[data-type='label']").hide();
-        $(".text-cont[data-type='label']").attr("data-active", "false");
-    }
-    checkIfSqlExportIsGo();
-}
-
-function exportSqlStatic()
-{
-    let outsql = '';
-    let total = $(".q-input-cont").length;
-    if ( $("#sql_table_create").is(":checked") )
-    {
-        outsql = "CREATE TABLE `" + $("#sql_table").val() + "` (";
-        let i1 = 0;
-        $(".q-input-cont").each(function()
+        for (let i = 0; i < rownum; i++)
         {
-            let _key = $(this).find(".text-cont[data-type='label'] input").val();
-            let _type = $(this).find(".gen_data_select").val();
-            outsql = outsql + "`" + _key + "` " + convertOutDataTypeToSQLtype(_type);
-            if (i1 != total - 1) outsql = outsql + ", ";
-            i1++;
-        });
-        outsql = outsql + ");";
+            let rowobj = {};
+            for (let fi = 0; fi < fields.length; fi++)
+            {
+                const _field = fields[fi];
+                let _data;
+                if (_field.type != "inc_id") _data = generateData(_field.type);
+                else _data = i;
+                rowobj[_field.identifier] = _data;
+            }
+            outobj.push(rowobj);
+        }
+            
     }
-
-    outsql = outsql + "INSERT INTO " + $("#sql_table").val() + " (";
-    let i2 = 0;
-    $(".q-input-cont").each(function()
+    else
     {
-        let _key = $(this).find(".text-cont[data-type='label'] input").val();
-        outsql = outsql + "`" + _key + "`";
-        if (i2 != total - 1) outsql = outsql + ", ";
-        i2++;
-    });
-    outsql = outsql + ")";
-
-    outsql = outsql + " VALUES (";
-    let i3 = 0;
-    $(".q-input-cont").each(function()
-    {
-        let _value = $(this).find(".text-cont[data-type='output'] input").val();
-        let _type = $(this).find(".gen_data_select").val();
-        if (_type != "boolean")
-            outsql = outsql + "'" + _value + "'";
-        else
-            outsql = outsql + _value;
-        if (i3 != total - 1) outsql = outsql + ", ";
-        i3++;
-    });
-    outsql = outsql + ");";
-
-    $("#debug").text(outsql);
+        for (let i = 0; i < rownum; i++)
+        {
+            let rowobj = [];
+            for (let fi = 0; fi < fields.length; fi++)
+            {
+                const _field = fields[fi];
+                let _data;
+                if (_field.type != "inc_id") _data = generateData(_field.type);
+                else _data = i;
+                rowobj.push(_data);
+            }
+            outobj.push(rowobj);
+        }
+    }
+    return outobj;
 }
 
-function exportSqlGenerate()
+function exportRowsAsSQL(fields, rownum, tableCreationInstruction, sqltablename = null)
 {
-    let outsql = '';
-    let rownum = parseInt( $("#sqlrownum").val() );
+    let outsql = 'data:text/plain;charset=utf-8,';
     if (rownum < 1) return;
 
-    let total = $(".q-input-cont").length;
-    if ( $("#sql_table_create").is(":checked") )
+    if ( tableCreationInstruction === true )
     {
-        outsql = "CREATE TABLE `" + $("#sql_table").val() + "` (";
-        let i1 = 0;
-        $(".q-input-cont").each(function()
+        outsql += "CREATE TABLE `" + sqltablename + "` (";
+        for (let fi = 0; fi < fields.length; fi++)
         {
-            let _key = $(this).find(".text-cont[data-type='label'] input").val();
-            let _type = $(this).find(".gen_data_select").val();
-            outsql = outsql + "`" + _key + "` " + convertOutDataTypeToSQLtype(_type);
-            if (i1 != total - 1) outsql = outsql + ", ";
-            i1++;
-        });
-        outsql = outsql + ");";
+            const _field = fields[fi];
+            outsql += "`" + _field.identifier + "` " + convertOutDataTypeToSQLtype(_field.type);
+            if (fi != fields.length - 1) outsql += ", ";
+        }
+        outsql += ");\r\n";
     }
 
-    outsql = outsql + "INSERT INTO " + $("#sql_table").val() + " (";
-    let i2 = 0;
-    $(".q-input-cont").each(function()
+    outsql += "INSERT INTO " + sqltablename + " (";
+                
+    for (let fi = 0; fi < fields.length; fi++)
     {
-        let _key = $(this).find(".text-cont[data-type='label'] input").val();
-        outsql = outsql + "`" + _key + "`";
-        if (i2 != total - 1) outsql = outsql + ", ";
-        i2++;
-    });
-    outsql = outsql + ") VALUES ";
+        const _field = fields[fi];
+        outsql += "`" + _field.identifier + "`";
+        if (fi != fields.length - 1) outsql += ", ";
+    }
+    outsql += ") VALUES \r\n";
 
-    for (let r = 0; r < rownum; r++)
+    for (let i = 0; i < rownum; i++)
     {
-        outsql = outsql + "(";
-        let i3 = 0;
-        $(".q-input-cont").each(function()
+        outsql += "(";
+        for (let fi = 0; fi < fields.length; fi++)
         {
-            let _type = $(this).find(".gen_data_select").val();
-            let _value = "";
-            if (_type != "inc_id")
-                _value = generateData(_type);
-            else
-                _value = (r+1).toString();
+            const _field = fields[fi];
+            let _data;
+            if (_field.type != "inc_id") _data = ""+generateData(_field.type);
+            else _data = ""+i;
             
-            if (_type != "boolean")
-                outsql = outsql + "'" + _value + "'";
+            if (_field.type != "boolean")
+                outsql += "\"" + _data + "\"";
             else
-                outsql = outsql + _value;
-            if (i3 != total - 1) outsql = outsql + ", ";
-            i3++;
-        });
-        if (r != rownum - 1)
-            outsql = outsql + "), ";
+                outsql += _data;
+            if (fi != fields.length - 1) outsql += ", ";
+        }
+
+        if (i != rownum - 1)
+            outsql += "), \r\n";
         else
-            outsql = outsql + ");";
+            outsql += ");";
     }
-    
-    $("#debug").text(outsql);
-    $("#debug").select();
+    return outsql;   
 }
 
-
-$(document).ready(function ()
+window.addEventListener('load', function(event)
 {
-    loadFromStorage();
-
-    $(".text-cont").click(function ()
-    {
-        $(this).find("input[type='text']").focus();
-        saveToStorage();
-    });
-
-    $(".q-input-cont input[type='text']").change(function(e)
-    {
-        if ($(this).val().length > 0)
-            $(this).parent().find("span").addClass('hoverlabel-lock');
-        else
-            $(this).parent().find("span").removeClass('hoverlabel-lock');
-
-        saveToStorage();
-    });
-
-    $(".gen_data_select").change(function()
-    {
-        let textbox = $(this).parent().find("input[name='output']");
-        textbox.val( generateData($(this).val()) );
-        textbox.change();
-        saveToStorage();
-    });
-
-    $("#addfield").click(function()
-    {
-        $( ".q-input-cont:last-of-type" ).clone(true).appendTo( ".list-of-fields" );
-        saveToStorage();
-    });
-
-    $(".refresh_button").click(function ()
-    {
-        $(this).parent().find(".gen_data_select").change();
-        saveToStorage();
-    });
-
-    $(".killfield").click(function()
-    {
-        if ($(".killfield").length > 1) $(this).parent().remove();
-        saveToStorage();
-    });
-
-    $("#labelcheck").change(function ()
-    {
-        toggleLabelCheck();
-        saveToStorage();
-    });
-
-    $("#but_exp_dat-row").click(function()
-    {
-        saveToStorage();
-        downloadObjectAsJson(getDataAsJson(false), "data.json");
-    });
-
-    $("#but_exp_many-rows").click(function()
-    {
-        saveToStorage();
-        let rownum = parseInt( $("#jsonrownum").val() );
-        if (rownum > 0)
-        {
-            downloadObjectAsJson( generateRowsAsJson(rownum), "data.json");
-            //$("#debug").text( generateRowsAsJson(rownum) );
-        }
-    });
-
-    $("#sql_table").change(function()
-    {
-        checkIfSqlExportIsGo();
-        saveToStorage();
-    });
-
-    $("#sql_table").keyup(function()
-    {
-        checkIfSqlExportIsGo();
-        saveToStorage();
-    });
-
-    $("#but_exp_csv-static").click(function ()
-    {
-        saveToStorage();
-
-        let muhjson = getDataAsJson(false);
-        let csvContent = "data:text/csv;charset=utf-8,";
-        csvContent += "\r\n";
-        if ($("#labelcheck").is(":checked"))
-        {
-            //json with labels
-            //csvContent = csvContent.substr(0, csvContent.length - 1);
-            //csvContent += "\r\n";
-            var labels = [];
-            for (let key in muhjson)
-            {
-                if (muhjson.hasOwnProperty(key))
-                {           
-                    labels.push(key);
-                    csvContent += "\"" + key + "\"";
-                    csvContent += ",";
-                }
-            }
-            csvContent = csvContent.substr(0, csvContent.length - 1);
-            csvContent += "\r\n";
-
-            for (let i = 0; i < labels.length; i++)
-            {
-                const e = muhjson[labels[i]];
-                csvContent += e + ",";
-            }
-            csvContent = csvContent.substr(0, csvContent.length - 1);
-            csvContent += "\r\n";
-        }
-        else
-        {
-            //array
-            for (let i = 0; i < muhjson.length; i++)
-            {
-                const e = muhjson[i];
-                csvContent += e + ",";
-                csvContent += "\r\n";
-            }
-            csvContent = csvContent.substr(0, csvContent.length - 1);
-        }
-        console.log(csvContent);
-        //console.log(muhjson);
-        downloadGeneric(csvContent, "data-table.csv");
-    });
-
-    $("#but_exp_csv-many").click(function ()
-    {
-        saveToStorage();
-
-        let amount_of_rows = parseInt( $("#csvtotalrows").val() );
-        if (amount_of_rows > 0)
-        {
-            let muhjson = generateRowsAsJson(amount_of_rows);
-            console.log(muhjson);
-
-            let csvContent = "data:text/csv;charset=utf-8,";
-            csvContent += "\r\n";
-
-            var labels = null
-            if ($("#labelcheck").is(":checked"))
-            {
-                labels = [];
-                for (let key in muhjson[0])
-                {
-                    if (muhjson[0].hasOwnProperty(key))
-                    {           
-                        labels.push(key);
-                        csvContent += "\"" + key + "\"";
-                        csvContent += ",";
-                    }
-                }
-                csvContent = csvContent.substr(0, csvContent.length - 1);
-                csvContent += "\r\n";
-
-                for (let r = 0; r < muhjson.length; r++)
-                {
-                    for (let i = 0; i < labels.length; i++)
-                    {
-                        let e = muhjson[r][labels[i]];
-                        if (e.includes("'")) e = e.split("'").join(" ");
-                        if (e.includes(",")) e = e.split(",").join(" ");
-                        csvContent += e + ",";
-                    }
-                    csvContent = csvContent.substr(0, csvContent.length - 1);
-                    csvContent += "\r\n";
-                }
-            }
-            else
-            {
-                //array //TEST TODO:
-                for (let r = 0; r < muhjson.length; r++)
-                {
-                    let ro = muhjson[r];
-                    console.log(ro);
-                    for (let fi = 0; fi < ro.length; fi++)
-                    {
-                        let e = ro[fi];
-                        if (e.includes("'")) e = e.split("'").join(" ");
-                        if (e.includes(",")) e = e.split(",").join(" ");
-                        csvContent += e + ",";
-                    }
-                    csvContent = csvContent.substr(0, csvContent.length - 1);
-                    csvContent += "\r\n";
-                }
-            }
-
-            downloadGeneric(csvContent, "data-table.csv");
-        }
-
-    });
-
-    $("#but_exp_sql_shown").click(function ()
-    {
-        saveToStorage();
-        exportSqlStatic();
-    });
-
-    $("#but_exp_sql_many-rows").click(function ()
-    {
-        saveToStorage();
-        exportSqlGenerate();
-    });
-
-    $("#debug").click(function()
-    {
-        $("#debug").select();
-    });
-
+    ReactDOM.createRoot(document.querySelector('#reactmain')).render(React.createElement(AppMain));            
 });
+

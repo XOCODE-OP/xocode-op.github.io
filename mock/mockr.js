@@ -1,4 +1,8 @@
-function SDG()
+"use strict";
+/*jshint esversion: 11 */
+
+
+function Mockr()
 {
     var allowedSpecialCharIndecies = [33, 35, 36, 37, 38, 42, 43, 45, 61, 63, 64, 95];
 
@@ -33,7 +37,7 @@ function SDG()
 
     this.unixtime = function()
     {
-        return faker.random.number({min:100, max:1566788129});
+        return faker.random.number({min:1011788129, max:1566788129});
     };
 
     this.numbers = function(_min, _max, _amount)
@@ -53,13 +57,14 @@ function SDG()
     this.isp = function()
     {
         let list = ["AT&T", "Comcast", "Time Warner Cable", "Verizon", "SoftBank", "NTT Docomo", 
-        "Telekom", "Virgin Media", "Vodafone", "BT", "Sky", "UnityMedia", "TPG", "Belong", "Optus", "SpinTel"];
+        "Telekom", "Virgin Media", "Vodafone", "BT", "Sky", "UnityMedia", "TPG", "Belong", "Optus", "TalkTalk", 
+        "SpinTel", "Cellnet", "Digiweb", "Eir", "IFA Telecom", "Imagine", "Pure Telecom", "Rural Wifi", "Sky Ireland"];
         return list[this.number(0, list.length-1)];
     };
 
     this.browser = function()
     {
-        let list = ["chrome", "edge", "firefox", "ie", "opera", "safari"];
+        let list = ["chrome", "edge", "firefox", "ie", "opera", "safari", "brave", "chromium", "vivaldi"];
         return list[this.number(0, list.length-1)];
     };
 
@@ -88,7 +93,7 @@ function SDG()
     this.charAny = function()
     {
         let r = 0;
-        let stop = false
+        let stop = false;
         while (!stop)
         {
             r = this.number(48,122);
@@ -143,7 +148,7 @@ function SDG()
     this.charLowerNumber = function()
     {
         let r = 0;
-        let stop = false
+        let stop = false;
         while (!stop)
         {
             r = this.number(48,122);
@@ -168,7 +173,7 @@ function SDG()
     this.charLowerNumberSpecial = function()
     {
         let r = 0;
-        let stop = false
+        let stop = false;
         while (!stop)
         {
             r = this.number(48,122);
@@ -194,7 +199,7 @@ function SDG()
     this.charUpperLowerNumber = function()
     {
         let r = 0;
-        let stop = false
+        let stop = false;
         while (!stop)
         {
             r = this.number(48,122);
@@ -220,7 +225,7 @@ function SDG()
     this.charUpperNumber = function()
     {
         let r = 0;
-        let stop = false
+        let stop = false;
         while (!stop)
         {
             r = this.number(48,122);
@@ -245,7 +250,7 @@ function SDG()
     this.charUpperNumberSpecial = function()
     {
         let r = 0;
-        let stop = false
+        let stop = false;
         while (!stop)
         {
             r = this.number(48,122);
@@ -299,7 +304,7 @@ function SDG()
     };
 
     this.title = function() {
-        let titles = ["Dr.", "Prof.", "Sir"]
+        const titles = ["Dr.", "Prof.", "Sir"];
         return titles[this.number(0, title.length-1)];
     };
 
@@ -384,7 +389,7 @@ function SDG()
     }
 
     this.detailedAddress = function() {
-        return faker.address.streetAddress() + " " + faker.address.secondaryAddress()
+        return faker.address.streetAddress() + " " + faker.address.secondaryAddress();
     }
 
     this.month = function() {
@@ -400,19 +405,18 @@ function SDG()
 //numbers and SMALL ONLY characters
 //faker.random.alphaNumeric(4);
 
-$(document).ready(function ()
+window.addEventListener('load', function(event)
 {
-    window.SDG = new SDG();
+    window.Mockr = new Mockr();
 
-    $("#debug").html("");
 
     //document.write(String.fromCharCode(65));
 
-    for (let index = 0; index < 33; index++) {
+    // for (let index = 0; index < 33; index++) {
         //console.log(faker.address.streetAddress() + " " + faker.address.secondaryAddress());
-        //console.log(SDG.currencyCode());
+        //console.log(Mockr.currencyCode());
         // console.log(faker.finance.currencyName());
-    }
-
+    // }
+        
 });
 
