@@ -118,11 +118,11 @@ var projects = [
     minilabel: "ERC20 Onchain Portfolio",
     proglang: "JavaScript Web3",
     tags: ["JavaScript", "HTML", "CSS", "Web3"],
-    url: "http://anubis.link/assets/",
+    url: "https://patriks.net/anubis/assets/",
     img: "anubislink.jpg",
     bigimg: "anubis1.png",
     bigimg2: "anubis1.png",
-    desc: `An online portfolio client for ERC 20 tokens. <a href='http://anubis.link/assets/' target='_blank'>http://anubis.link/assets/</a><br />
+    desc: `An online portfolio client for ERC 20 tokens. <a href='https://patriks.net/anubis/assets/' target='_blank'>https://patriks.net/anubis/assets/</a><br />
     Provide 1 or many ethereum addresses and this client returns a balance of every ERC 20 held by those addresses, along with their USD value and total portfolio values. <br />
     Retrieving all ERC 20 balances held by an address, is not a trivial task, so much so that MetaMask still does not support it. <br />
     One has to find all ERC 20 contracts and ask them all individually, technically. <br />
@@ -492,12 +492,12 @@ var projects = [
     {
       title: "Mock-data Generator",
       minilabel: "Mock-data Generator",
-      proglang: "JavaScript",
-      tags: ["JavaScript", "HTML", "CSS"],
+      proglang: "React JavaScript",
+      tags: ["React", "JavaScript", "HTML", "CSS"],
       url: "https://www.piecex.com/products/Sample-Data-Generator-Mocking-583",
       img: "mockdata-cover.png",
       bigimg: "mockdata.png",
-      desc: "This is a mock data (sample data) generator, made with web tech and usable in the browser.<br />"+
+      desc: "<a href='https://patriks.net/mock/' target='_blank'>FIND IT HERE: https://patriks.net/mock/</a><br />Built with React.<br />This is a mock data (sample data) generator, made with web tech and usable in the browser.<br />"+
       "Either generate one set or as many rows of random data as you need.<br />"+
       "Over 40 different data types are supported like random numbers, strings, UUIDs, dates, IP addresses, names, addresses etc. Additionally you can export the data as JSON or SQL.",
       video: "https://player.vimeo.com/video/354595564",

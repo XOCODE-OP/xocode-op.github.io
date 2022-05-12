@@ -38,6 +38,7 @@ var skills = [
     "NightmareJS",
     "Junit",
     "AngularJS",
+    "React",
     "Ionic",
     "Android",
     "iOS",
