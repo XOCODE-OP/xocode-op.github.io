@@ -172,7 +172,6 @@ var projects = [
     url: "https://github.com/XOCODE-OP/ClipSyne",
     img: "clipsyne.jpg",
     bigimg: "clipsyne1.jpg",
-    bigimg2: "clipsyne1.jpg",
     desc: `Clipboard manager written using JavaScript and Electron JS. App starts out hidden. <br />
     By hitten a specific globally registered hotkey combination, the menu in the screenshot will show up. This app records all clipboard copy events. 
     All copied clipboards entries are shown in a list. The user can choose any entry from the list or search for entries. 
@@ -268,7 +267,6 @@ var projects = [
     tags: ["JavaScript", "HTML", "CSS"],
     img: "webscraper.jpg",
     bigimg: "webscraperscreen1.jpg",
-    bigimg2: "webscraperscreen1.jpg",
     desc: `Using JavaScript Node JS package Puppeteer in order to scrape data from website with missing search function etc.<br />
     Scraps data until all is collected, writes data continuesly to a sqlite3 database file, for easy use and to prevent data loss halfway through. `,
     group: "other"
@@ -299,7 +297,6 @@ var projects = [
     tags: ["JavaScript", "HTML", "CSS"],
     img: "nanooq-cover.jpg",
     bigimg: "nanooq.gif",
-    bigimg2: "nanooq.gif",
     desc: "Multi purpose operating system fork.<br />Built on Firefox OS. HTML, CSS, JS in 2014<br />"+
     "Nanooq was a prototype tablet UI that was made at net mobile. <br />"+
     "Built from Firefox OS as a white-label fork. This white fork was designed to have many different specific custom use cases. <br />"+
@@ -872,7 +869,6 @@ var projects = [
       img: "bloobuy.jpg",
       proglang: "Android",
       bigimg: "missing.jpg",
-      bigimg2: "missing.jpg",
       tags: ["Java", "android", "tools", "ios"],
       title: "Bloobuy - Bluetooth LE Beacon Advertisement Solution",
       minilabel: "Android Bluetooth LE tech",
@@ -951,7 +947,6 @@ var projects = [
       tags: ["python"],
       img: "autoprice.jpg",
       bigimg: "autoprice.jpg",
-      bigimg2: "autoprice.jpg",
       desc: "This is an algorithm to automatically set the price of items on an ecommerce platform depending on analytics, external and "+
       "internal. By looking at page views, favorite listings and such, an internal ranking is calculated. Externally news and stocks are evaluated to gauge general"+
       "interest in types of items. No UI, CLI only.",

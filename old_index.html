@@ -16,10 +16,10 @@
     content="Portfolio of Patrik Schulze. Skills. Projects. Experience.">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style_resume.css">
-  <link rel="stylesheet" href="icon_spritesheetsbaby.css">
-  <link rel="stylesheet" href="cover_spritesheetshalf.css">
+  <link rel="stylesheet" href="icon_spritesheets.css">
+  <link rel="stylesheet" href="cover_spritesheets.css">
   <script src="jquery-3.3.1.min.js"></script>
   <script  src="project_data.js"></script>
   <script  src="skills_data.js"></script>
@@ -27,6 +27,8 @@
 </head>
 <body>
 
+  <div id="particle-canvas"></div>
+  
   <div class='layer' data-content='homepage'>
     
       <div class='name-title'>
@@ -34,9 +36,9 @@
             <p class='home-title'>Senior Software Engineer</p>
 
             <div class='mini-desc'>
-                <p class='minirow'><span class='tagspan'>Technology Agnostic</span><span class='tagspan'>Analytical</span> <span class='tagspan'>Future Thinking</span> </p>
-                <p class='minirow'><span class='tagspan'>Strategist</span> <span class='tagspan'>Big Picture</span> <span class='tagspan'>Business Minded</span> <span class='tagspan'>Cooperation</span> </p>
-                <p class='minirow'><span class='tagspan'>Programming since age 2001</span> <span class='tagspan'>over 12 years professional experience - since 2009</span> </p>
+                <p class='minirow'><span class='tagspan'>Technology Agnostic</span><span class='tagspan'>Analytical</span> <span class='tagspan'>Technologist</span> <span class='tagspan'>Futurist</span> <span class='tagspan'>Strategist</span> <span class='tagspan'>Big Picture</span> </p>
+
+                <p class='minirow'><span class='tagspan'>Programming since age 2001</span> <span class='tagspan'>over 10 years professional experience - since 2009</span> </p>
             </div>
       </div>
       <div class='sections-big'>
@@ -242,6 +244,8 @@
                 </div>
             </div>
 
+            
+
         </div>
         <a id='downloadpdf_button' href='resume.pdf' target='_blank'><span>Download</span><br />PDF</a>
       </div>
@@ -250,12 +254,8 @@
           <p class='content-page-title'>Projects</p>
           <div class='projects-container'>
 
-          </div>
-          <div class="bigtexttooltip">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-            et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  aliquip ex ea commodo.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu  fugiat nulla pariatur. 
+            
+
           </div>
           
       </div>
@@ -327,27 +327,11 @@
             </div>
 
             <div class='skill-group'>
-                <h3>topics</h3>
+                <h3>Linguistic Languages</h3>
                 <div class="skill-group-list">
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-test"></i>Testing</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-visual"></i>Visual Design</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-architect"></i>SystemsArchitecture</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-uiux"></i>UI & UX</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-automation"></i>Automation</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-cryptography"></i>Cryptography</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-scrum"></i>SCRUM</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-rest"></i>REST</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-data-science"></i>Data Science</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-apidesign"></i>API&nbsp;Design</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-agile"></i>Agile</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-opsec"></i>OPSEC</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-sec"></i>Security</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-teamlead"></i>Team lead</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-teach"></i>Teaching</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-consulting"></i>Consulting</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-documentation"></i>Documentation</div>
-                    <div class='skilltile'><img src='img/icons/3d.png' />3D</div>
-                    <div class='skilltile'><img src='img/icons/vr.png' />VR</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-german"></i>German [Native]</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-usa"></i>English [Native]</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-japan"></i>Japanese [Intermediate]</div>
                 </div>
             </div>
 
@@ -410,6 +394,31 @@
             </div>
 
             <div class='skill-group'>
+                <h3>Other skillsets and experience</h3>
+                <div class="skill-group-list">
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-test"></i>Testing</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-visual"></i>Visual Design</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-architect"></i>Systems<br />Architecture</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-uiux"></i>UI & UX</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-automation"></i>Automation</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-cryptography"></i>Cryptography</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-scrum"></i>SCRUM</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-rest"></i>REST</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-data-science"></i>Data Science</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-apidesign"></i>API&nbsp;Design</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-agile"></i>Agile</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-opsec"></i>OPSEC</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-sec"></i>Security</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-teamlead"></i>Team lead</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-teach"></i>Teaching</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-consulting"></i>Consulting</div>
+                    <div class='skilltile'><i class="sprites-icons sprite-icon-documentation"></i>Documentation</div>
+                    <div class='skilltile'><img src='img/icons/3d.png' />3D</div>
+                    <div class='skilltile'><img src='img/icons/vr.png' />VR</div>
+                </div>
+            </div>
+
+            <div class='skill-group'>
                 <h3>Interests</h3>
                 <div class="skill-group-list">
                     <div class='skilltile'><i class="sprites-icons sprite-icon-robotics"></i>Robotics</div>
@@ -435,15 +444,6 @@
                 </div>
             </div>
 
-            <div class='skill-group'>
-                <h3>Linguistic Languages</h3>
-                <div class="skill-group-list">
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-german"></i>German [Native]</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-usa"></i>English [Native]</div>
-                    <div class='skilltile'><i class="sprites-icons sprite-icon-japan"></i>Japanese [Intermediate]</div>
-                </div>
-            </div>
-
         </div>
       </div>
 
@@ -452,6 +452,22 @@
             <div class='contact-container'>
             
                 <a href='mailto:pschulzex@protonmail.com'>pschulzex@protonmail.com</a>
+
+                <!-- <pre style='font-size: 14px;'>
+                80-20 Rule - Pareto 
+
+                "Specialization is for insects." - Naval Ravikant
+
+                KISS: Keep it simple. Avoid complexity unless absolutely necessary.
+
+                "An idiot admires complexity, a genius admires simplicity." - Terry A. Davis
+
+                "A jack of all trades is a master of none, but oftentimes better than a master of one." - Viktor Vicsek
+
+                "He adds function by deleting code. A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away."
+                "In software, the most beautiful code, the most beautiful functions, and the most beautiful programs are sometimes not there at all."
+                Antoine de Saint-Exupéry, Jon Bentley. Beautiful Code by Andy Oram, Greg Wilson.
+                </pre> -->
 
             </div>
       </div>
@@ -508,8 +524,8 @@
     <!-- https://www.youtube.com/embed/qwHOfoVRFRc -->
   </div>
 
-  <!-- <script src='particle-network.min.js'></script> -->
-  <script src="script2.js"></script>
+  <script src='particle-network.min.js'></script>
+  <script  src="script.js"></script>
 
 </body>
 </html>

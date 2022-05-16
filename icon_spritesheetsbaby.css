@@ -1,0 +1,377 @@
+.sprites-icons {
+    background-image: url(img/icon_spritesheetbaby.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 20px;
+    height: 20px;
+
+}
+
+.sprite-icon-aftereffects {
+
+    background-position: calc(-2px * 0.3333) calc(-2px * 0.3333);
+}
+
+.sprite-icon-agile {
+
+    background-position: calc(-66px * 0.3333) calc(-2px * 0.3333);
+}
+
+.sprite-icon-ai {
+
+    background-position: calc(-130px * 0.3333) calc(-2px * 0.3333);
+}
+
+.sprite-icon-angular {
+
+    background-position: calc(-194px * 0.3333) calc(-2px * 0.3333);
+}
+
+.sprite-icon-apache {
+
+    background-position: calc(-258px * 0.3333) calc(-2px * 0.3333);
+}
+
+.sprite-icon-apidesign {
+
+    background-position: calc(-322px * 0.3333) calc(-2px * 0.3333);
+}
+
+.sprite-icon-architect {
+
+    background-position: calc(-386px * 0.3333) calc(-2px * 0.3333);
+}
+
+.sprite-icon-asm {
+
+    background-position: calc(-450px * 0.3333) calc(-2px * 0.3333);
+}
+
+.sprite-icon-audacity {
+
+    background-position: calc(-2px * 0.3333) calc(-66px * 0.3333);
+}
+
+.sprite-icon-audition {
+
+    background-position: calc(-66px * 0.3333) calc(-66px * 0.3333);
+}
+
+.sprite-icon-automation {
+
+    background-position: calc(-130px * 0.3333) calc(-66px * 0.3333);
+}
+
+.sprite-icon-basic {
+
+    background-position: calc(-194px * 0.3333) calc(-66px * 0.3333);
+}
+
+.sprite-icon-bitcoin {
+
+    background-position: calc(-258px * 0.3333) calc(-66px * 0.3333);
+}
+
+.sprite-icon-blender {
+
+    background-position: calc(-322px * 0.3333) calc(-66px * 0.3333);
+}
+
+.sprite-icon-blockchain {
+
+    background-position: calc(-386px * 0.3333) calc(-66px * 0.3333);
+}
+
+.sprite-icon-chai {
+
+    background-position: calc(-450px * 0.3333) calc(-66px * 0.3333);
+}
+
+.sprite-icon-consulting {
+    width: 20px;
+    height: 20px;
+    background-position: calc(-2px * 0.3333) calc(-130px * 0.3333);
+}
+
+.sprite-icon-crypto {
+
+    background-position: calc(-66px * 0.3333) calc(-130px * 0.3333);
+}
+
+.sprite-icon-cryptography {
+
+    background-position: calc(-130px * 0.3333) calc(-130px * 0.3333);
+}
+
+.sprite-icon-data-science {
+
+    background-position: calc(-194px * 0.3333) calc(-130px * 0.3333);
+}
+
+.sprite-icon-digitallogic {
+
+    background-position: calc(-258px * 0.3333) calc(-130px * 0.3333);
+}
+
+.sprite-icon-diplomacy {
+
+    background-position: calc(-322px * 0.3333) calc(-130px * 0.3333);
+}
+
+.sprite-icon-documentation {
+
+    background-position: calc(-386px * 0.3333) calc(-130px * 0.3333);
+}
+
+.sprite-icon-dotnet {
+
+    background-position: calc(-450px * 0.3333) calc(-130px * 0.3333);
+}
+
+.sprite-icon-elec {
+
+    background-position: calc(-66px * 0.3333) calc(-194px * 0.3333);
+}
+
+.sprite-icon-electron {
+
+    background-position: calc(-130px * 0.3333) calc(-194px * 0.3333);
+}
+
+.sprite-icon-eth {
+
+    background-position: calc(-194px * 0.3333) calc(-194px * 0.3333);
+}
+
+.sprite-icon-express {
+
+    background-position: calc(-258px * 0.3333) calc(-194px * 0.3333);
+}
+
+.sprite-icon-finance {
+
+    background-position: calc(-322px * 0.3333) calc(-194px * 0.3333);
+}
+
+.sprite-icon-german {
+
+    background-position: calc(-386px * 0.3333) calc(-194px * 0.3333);
+}
+
+.sprite-icon-intelligence {
+
+    background-position: calc(-450px * 0.3333) calc(-194px * 0.3333);
+}
+
+.sprite-icon-ionic {
+
+    background-position: calc(-2px * 0.3333) calc(-258px * 0.3333);
+}
+
+.sprite-icon-japan {
+
+    background-position: calc(-66px * 0.3333) calc(-258px * 0.3333);
+}
+
+.sprite-icon-jenkins {
+
+    background-position: calc(-130px * 0.3333) calc(-258px * 0.3333);
+}
+
+.sprite-icon-jquery {
+
+    background-position: calc(-194px * 0.3333) calc(-258px * 0.3333);
+}
+
+.sprite-icon-libgdx {
+
+    background-position: calc(-258px * 0.3333) calc(-258px * 0.3333);
+}
+
+.sprite-icon-macroeconomics {
+
+    background-position: calc(-322px * 0.3333) calc(-258px * 0.3333);
+}
+
+.sprite-icon-management {
+
+    background-position: calc(-386px * 0.3333) calc(-258px * 0.3333);
+}
+
+.sprite-icon-maya {
+
+    background-position: calc(-450px * 0.3333) calc(-258px * 0.3333);
+}
+
+.sprite-icon-mocha {
+
+    background-position: calc(-2px * 0.3333) calc(-322px * 0.3333);
+}
+
+.sprite-icon-negotiations {
+
+    background-position: calc(-66px * 0.3333) calc(-322px * 0.3333);
+}
+
+.sprite-icon-nightmare {
+
+    background-position: calc(-130px * 0.3333) calc(-322px * 0.3333);
+}
+
+.sprite-icon-nodejs {
+
+    background-position: calc(-194px * 0.3333) calc(-322px * 0.3333);
+}
+
+.sprite-icon-objc {
+
+    background-position: calc(-258px * 0.3333) calc(-322px * 0.3333);
+}
+
+.sprite-icon-opengl {
+
+    background-position: calc(-322px * 0.3333) calc(-322px * 0.3333);
+}
+
+.sprite-icon-opsec {
+
+    background-position: calc(-386px * 0.3333) calc(-322px * 0.3333);
+}
+
+.sprite-icon-oracle {
+
+    background-position: calc(-450px * 0.3333) calc(-322px * 0.3333);
+}
+
+.sprite-icon-photoshop {
+
+    background-position: calc(-2px * 0.3333) calc(-386px * 0.3333);
+}
+
+.sprite-icon-physics {
+
+    background-position: calc(-66px * 0.3333) calc(-386px * 0.3333);
+}
+
+.sprite-icon-premiere {
+
+    background-position: calc(-130px * 0.3333) calc(-386px * 0.3333);
+}
+
+.sprite-icon-problemsolving {
+
+    background-position: calc(-194px * 0.3333) calc(-386px * 0.3333);
+}
+
+.sprite-icon-psy {
+
+    background-position: calc(-258px * 0.3333) calc(-386px * 0.3333);
+}
+
+.sprite-icon-quantum {
+
+    background-position: calc(-322px * 0.3333) calc(-386px * 0.3333);
+}
+
+.sprite-icon-rest {
+
+    background-position: calc(-386px * 0.3333) calc(-386px * 0.3333);
+}
+
+.sprite-icon-robotics {
+
+    background-position: calc(-450px * 0.3333) calc(-386px * 0.3333);
+}
+
+.sprite-icon-sass {
+
+    background-position: calc(-2px * 0.3333) calc(-450px * 0.3333);
+}
+
+.sprite-icon-science {
+
+    background-position: calc(-66px * 0.3333) calc(-450px * 0.3333);
+}
+
+.sprite-icon-scrum {
+
+    background-position: calc(-130px * 0.3333) calc(-450px * 0.3333);
+}
+
+.sprite-icon-sec {
+
+    background-position: calc(-194px * 0.3333) calc(-450px * 0.3333);
+}
+
+.sprite-icon-selenium {
+    width: 20px;
+    height: 20px;
+    background-position: calc(-258px * 0.3333) calc(-450px * 0.3333);
+}
+
+.sprite-icon-shell {
+
+    background-position: calc(-322px * 0.3333) calc(-450px * 0.3333);
+}
+
+.sprite-icon-solidity {
+
+    background-position: calc(-386px * 0.3333) calc(-450px * 0.3333);
+}
+
+.sprite-icon-svn {
+
+    background-position: calc(-450px * 0.3333) calc(-450px * 0.3333);
+}
+
+.sprite-icon-teach {
+
+    background-position: calc(-514px * 0.3333) calc(-2px * 0.3333);
+}
+
+.sprite-icon-teamlead {
+
+    background-position: calc(-514px * 0.3333) calc(-66px * 0.3333);
+}
+
+.sprite-icon-tech {
+
+    background-position: calc(-514px * 0.3333) calc(-130px * 0.3333);
+}
+
+.sprite-icon-test {
+
+    background-position: calc(-514px * 0.3333) calc(-194px * 0.3333);
+}
+
+.sprite-icon-uiux {
+
+    background-position: calc(-514px * 0.3333) calc(-258px * 0.3333);
+}
+
+.sprite-icon-unity {
+
+    background-position: calc(-514px * 0.3333) calc(-322px * 0.3333);
+}
+
+.sprite-icon-usa {
+
+    background-position: calc(-514px * 0.3333) calc(-386px * 0.3333);
+}
+
+.sprite-icon-vegas {
+
+    background-position: calc(-514px * 0.3333) calc(-450px * 0.3333);
+}
+
+.sprite-icon-visual {
+
+    background-position: calc(-2px * 0.3333) calc(-514px * 0.3333);
+}
+
+.sprite-icon-winforms {
+
+    background-position: calc(-66px * 0.3333) calc(-514px * 0.3333);
+}
+
+
