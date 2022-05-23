@@ -201,7 +201,35 @@ $( document ).ready(function()
         e.addEventListener("mousemove", function( event )
         {
             bigtexttooltipbox.style.display = "block";
-            bigtexttooltipbox.style.top = (event.clientY + 20) + 'px';
+            let newY = "";
+            let newX = "";
+            if (event.clientY < window.innerHeight*0.5)
+                newY = (event.clientY + 20) + 'px';
+            else
+                newY = (event.clientY - bigtexttooltipbox.offsetHeight - 20) + 'px';
+            
+            if (event.clientX < window.innerWidth*0.65)
+                newX = (event.clientX + 20) + 'px';
+            else
+                newX = (event.clientX - bigtexttooltipbox.offsetWidth - 20) + 'px';
+
+            bigtexttooltipbox.style.top = newY;
+            bigtexttooltipbox.style.left = newX;
+        });
+        e.addEventListener("click", function( event )
+        {
+            bigtexttooltipbox.style.display = "block";
+            if (event.clientY < bigtexttooltipbox.clientHeight*0.5){
+                console.log();
+                console.log("upper");
+            }
+            else
+            {
+                console.log();
+                console.log("lower");
+            }
+            console.log("event.clientY", event.clientY);
+            console.log("window.innerHeight", window.innerHeight);
             bigtexttooltipbox.style.left = (event.clientX - (bigtexttooltipbox.clientWidth*0.33) + 20) + 'px';
         });
     });

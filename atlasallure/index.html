@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+            *{
+                font-family: 'Rajdhani', sans-serif;
+                padding: 0;
+                margin: 0;
+            }
+
+            body
+            {
+                display: grid;
+                place-items: center;
+                background-color: rgb(24, 24, 24);
+                color: rgb(255, 87, 87);
+                text-shadow:
+                0 0 4px rgb(255, 87, 87),
+                0 0 4px rgb(255, 87, 87);
+                justify-content: start;
+            }
+
+            main
+            {
+                font-size: 140px;
+                padding-left: 18vw;
+            }
+
+            .base
+            {
+                display: block;
+                height: 130px;
+            }
+
+            .flex
+            {
+                display: flex;
+                flex-direction: row;
+                gap: 14px
+            }
+
+            @keyframes cursor-blink
+            {
+                20% {
+                    opacity: 1.0;
+                }
+
+                30% {
+                    opacity: 0;
+                }
+
+                60% {
+                    opacity: 0;
+                }
+            }
+
+            .blockcursor
+            {
+                font-size: 88px;
+                margin-top: 29px;
+                animation: cursor-blink 1.5s steps(30) infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class='base'>&gt;Atlas</div>
+            <div class='flex'>
+                <div class='base'>&nbsp; Allure</div>
+                <div class='blockcursor'>&block;</div>
+            </div>
+        </main>
+    </body>
+</html>

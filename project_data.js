@@ -10,7 +10,6 @@ var projects = [
     img: "bitcoinwallet.jpg",
     subline: "",
     bigimg: "bitcoinwallet_gui-big.jpg",
-    bigimg2: "bitcoinwallet.jpg",
     desc: "This project is using Java and Swing for the GUI.<br /><br />" +
     "Manage wallets, import a wallet, and " +
     "create new ones. New incoming and outgoing transactions are shown in the GUI " +
@@ -25,7 +24,6 @@ var projects = [
     tags: ["Java"],
     url: "https://www.piecex.com/source-code/Bitcoin-Java-Module-643",
     img: "bitcoinmoduleJava.jpg",
-    bigimg2: "btc_java_module1.png",
     bigimg: "btc_java_module2.jpg",
     desc: "Makes it easy to set up bitcoin, initialize and run common tasks using the supplied methods and example classes.<br />"+
     "Supports wallet management.<br />"+
@@ -43,7 +41,6 @@ var projects = [
     url: "https://www.piecex.com/source-code/Node-JS-Bitcoin-Blockchain-API-697",
     img: "bitcoinlazyapi.jpg",
     bigimg: "lazybtc.jpg",
-    bigimg2: "bitcoinlazyapi.jpg",
     desc: "Lazy API for the Bitcoin Blockchain using Node JS. <a href='https://en.bitcoin.it/wiki/Lazy_API' target='_blank'>https://en.bitcoin.it/wiki/Lazy_API</a> "+
     "<br />A lazy API here is a name for an API that does NOT require you to run your own Bitcoin Node. Which is usually the case. This API interfaces with one of the many public website APIs to read out the blockchain’s data."+
     "<br />This code provides functionality to do anything one may want from blockchain data, however only read operations."+
@@ -58,7 +55,6 @@ var projects = [
     url: "https://www.piecex.com/source-code/C-Bitcoin-Connector-685",
     img: "bitcoin_c.jpg",
     bigimg: "btc_c_module1.png",
-    bigimg2: "btc_c_module2.png",
     desc: "This C++ codebase is meant for merchants, payment systems and other Bitcoin node operators.<br />"+
     "Sample on how to control a bitcoin node from C++ and send coins, view transaction, get balance, see all incoming transactions, see address specific incoming transactions (useful for payments) etc.",
     group: "cryptocurrency / blockchain"
@@ -70,7 +66,6 @@ var projects = [
     url: "",
     img: "ebisu-cover.jpg",
     bigimg: "ebisu1.png",
-    bigimg2: "ebisu2.png",
     desc: "This cryptocurrency trading bot was written in 2017 using Java on IntelliJ.<br />It uses Bittrex to trade and can trade whichever coin is on Bittrex, using"+
     " the Bittex API. CLI only. <br />"+
     "It features basic trend and price analysis as well as a watchlist to give certain coins specific attention. And a blacklist to ignore some coins specifically, "+
@@ -84,7 +79,6 @@ var projects = [
     url: "https://www.piecex.com/products/Android-Crypto-Portfolio-App-384",
     img: "crypto-portfolio-android.jpg",
     bigimg: "androidcrypto.jpg",
-    bigimg2: "android_crypto.png",
     desc: "Features a fully functional working portfolio app.<br /><br />"+
     "Every cryptocurrency comes with an icon images.<br /><br />"+
     "Features:<br />"+
@@ -121,7 +115,6 @@ var projects = [
     url: "https://patriks.net/anubis/assets/",
     img: "anubislink.jpg",
     bigimg: "anubis1.png",
-    bigimg2: "anubis1.png",
     desc: `An online portfolio client for ERC 20 tokens. <a href='https://patriks.net/anubis/assets/' target='_blank'>https://patriks.net/anubis/assets/</a><br />
     Provide 1 or many ethereum addresses and this client returns a balance of every ERC 20 held by those addresses, along with their USD value and total portfolio values. <br />
     Retrieving all ERC 20 balances held by an address, is not a trivial task, so much so that MetaMask still does not support it. <br />
@@ -240,7 +233,7 @@ var projects = [
     url: "https://www.piecex.com/products/Medical-Clinic-App-Reception-Data-576",
     img: "clinic-cover.jpg",
     bigimg: "clinic.png",
-    desc: "This is a clinic stagg and reception sata app, using Electron. "+
+    desc: "This is a clinic data and reception application, using Electron. "+
     "It includes features like: <br />"+
     "Appointment Calendar, custom made calendar.<br />"+
     "Patient data, searchable via various data types.<br />Online ticket list.<br />"+
@@ -256,7 +249,6 @@ var projects = [
     tags: ["JavaScript", "HTML", "CSS"],
     img: "chromeextension.jpg",
     bigimg: "cext1.jpg",
-    bigimg2: "cext2.jpg",
     desc: "Created as a proof of concept for chrome extensions learning how to communicate both ways and integrate it.",
     group: "other"
   },
@@ -525,7 +517,6 @@ var projects = [
       tags: ["JavaScript", "HTML", "CSS"],
       url: "https://www.piecex.com/products/Survey-System-591",
       bigimg: "survey.jpg",
-      bigimg2: "survey2.jpg",
       img: "surveysystem-cover.png",
       desc: "This is a survey system project. "+
       "This is a simple survey/quiz type system, made with web the common web technologies HTML, JavaScript, CSS. Survey data is saved in a JSON object, "+
@@ -554,7 +545,6 @@ var projects = [
       tags: ["JavaScript", "NodeJS"],
       img: "simcheck.jpg",
       bigimg: "simcheck1.png",
-      bigimg2: "simcheck2.png",
       proglang: "NodeJS",
       subline: "Source Code Analysis Tool",
       desc: "<p>This project scans code bases, compares them against other code bases and calculates a similarity score. By filtering to relevant files and comparing them. "+
@@ -604,7 +594,6 @@ var projects = [
       url: "https://www.piecex.com/products/Amazon-S3-bucket-downloader-C-602",
       img: "amazons3-cover.png",
       bigimg: "amzs3.jpg",
-      bigimg2: "s32.jpg",
       desc: "This project is a showcase project written in C# using the AWS SDK to show how to download your data from AWS S3 buckets.<br />"+
       "Specify the bucket name, the bucket key, your secret key and access key for AWS and you can download it directly and process it inside your C# code.<br />"+
       "It is a console program to show how to access data from your S3 and incorporate it.",
@@ -615,7 +604,6 @@ var projects = [
       tags: ["csharp"],
       img: "codeana.jpg",
       bigimg: "cc1.jpg",
-      bigimg2: "cc2.jpg",
       proglang: "C#",
       subline: "Backend web utility with REST interface",
       desc: "<p>This project scans code bases, compares them against other code bases and calculates a similarity score. "+
@@ -657,7 +645,6 @@ var projects = [
       title: "Medical Pac-man",
       minilabel: "Medical Pac-man Game",
       proglang: "C# Unity",
-      bigimg2: "pac2.jpg",
       video: "https://www.youtube.com/embed/T8pPwII1bDc",
       subline: "Tradeshow arcade style video game<br>PC using Unity3D<br>2017",
       desc: "<p>An arcade style video game that was made specifically for a medical tradeshow, featuring relevant devices.</p>" +
@@ -775,7 +762,6 @@ var projects = [
       url: "https://www.piecex.com/products/C-ASPNET-Core-Kestrel-Web-Server-586",
       img: "kestrel-cover.png",
       bigimg: "kestrel.jpg",
-      bigimg2: "kestrel.jpg",
       desc: "This is a web server made in C#. "+
       "The exact technology stack here is C# ASP.NET Core and Kestrel. "+
       "This also uses React in order to facilitate a web browser interface, which can be used for in and outputs. "+
@@ -789,7 +775,6 @@ var projects = [
       img: "qn-cover.jpg",
       video: "https://www.youtube.com/embed/2SszSgS-q4M",
       bigimg: "qn1.jpg",
-      bigimg2: "qn2.jpg",
       subline: "fix",
       desc: "Quantum Nucleus is a 2D game/framework/codebase that was never finished. <br /><br />"+
 
