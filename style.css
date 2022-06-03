@@ -429,6 +429,7 @@ a, a:visited{
     padding-left: 14px;
     font-weight: 700;
     padding-right: 16px;
+    cursor: pointer;
 }
 
 .project_longlabel:hover
