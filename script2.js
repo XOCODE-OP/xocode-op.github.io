@@ -155,11 +155,11 @@ $( document ).ready(function()
             _insert = _insert + `<div class='sprite-cover sprite-cover-${projects[x].img.split(".")[0]} project_tile'  data-arrayindex='${x}' 
             data-project='${projects[x].img}' data-projectid='${projects[x].id}'>
             <div class='project_longlabel'>${projects[x].minilabel}
-            ${tags}
+            <div style='display: inline-block'>${tags}</div>
             </div>
             </div>`;
         }
-        _insert = _insert + "</div></div><br />";
+        _insert = _insert + "</div></div>";
     }
     $(".content-page[data-pageid='projects'] .projects-container").append(_insert);
 
@@ -167,9 +167,16 @@ $( document ).ready(function()
     let projecttiles = document.querySelectorAll(".project_tile");
     projecttiles.forEach(function(e)
     {
-        e.addEventListener("mouseenter", function( event )
+        e.addEventListener("click", function( event )
         {
+            let pp = document.querySelectorAll(".preview_project");
+            pp.forEach(x => x.remove());
+
             const proj = projects[e.dataset.projectid];
+
+            let div = document.createElement("div");
+            div.classList.add("preview_project");
+            
             let content = ``;
             content += `<div class='tooltipdetails-title'>${proj.title}</div>`;
             content += `<div class='tooltipdetails-tags'>`;
@@ -182,56 +189,47 @@ $( document ).ready(function()
 
             if (proj.bigimg)
             {
-                content += `<div><img class='tooltipdetails-img' src='img/project-big-screenshots/${proj.bigimg}' /><br />`;
+                content += `<div style='text-align: center;'><img class='tooltipdetails-img' src='img/project-big-screenshots/${proj.bigimg}' /><br />`;
                 if (proj.bigimg2) content += `<img class='tooltipdetails-img' src='img/project-big-screenshots/${proj.bigimg2}' />`;
                 content += `</div>`;
             }
             else
             {
-                content += `<div><img class='tooltipdetails-img' src='img/project-big-screenshots/missing.jpg' /></div>`;
+                content += `<div style='text-align: center;'><img class='tooltipdetails-img' src='img/project-big-screenshots/missing.jpg' /></div>`;
             }
             content += `</div>`;
 
-            bigtexttooltipbox.innerHTML = content;
-        });
-        e.addEventListener("mouseout", function( event )
-        {
-            bigtexttooltipbox.style.display = "none";
-        });
-        e.addEventListener("mousemove", function( event )
-        {
-            bigtexttooltipbox.style.display = "block";
-            let newY = "";
-            let newX = "";
-            if (event.clientY < window.innerHeight*0.5)
-                newY = (event.clientY + 20) + 'px';
-            else
-                newY = (event.clientY - bigtexttooltipbox.offsetHeight - 20) + 'px';
-            
-            if (event.clientX < window.innerWidth*0.65)
-                newX = (event.clientX + 20) + 'px';
-            else
-                newX = (event.clientX - bigtexttooltipbox.offsetWidth - 20) + 'px';
+            div.innerHTML = content;
 
-            bigtexttooltipbox.style.top = newY;
-            bigtexttooltipbox.style.left = newX;
+            e.after(div);
         });
-        e.addEventListener("click", function( event )
-        {
-            bigtexttooltipbox.style.display = "block";
-            if (event.clientY < bigtexttooltipbox.clientHeight*0.5){
-                console.log();
-                console.log("upper");
-            }
-            else
-            {
-                console.log();
-                console.log("lower");
-            }
-            console.log("event.clientY", event.clientY);
-            console.log("window.innerHeight", window.innerHeight);
-            bigtexttooltipbox.style.left = (event.clientX - (bigtexttooltipbox.clientWidth*0.33) + 20) + 'px';
-        });
+        // e.addEventListener("mouseenter", function( event )
+        // {
+        //     const proj = projects[e.dataset.projectid];
+        //     let content = ``;
+        //     content += `<div class='tooltipdetails-title'>${proj.title}</div>`;
+        //     content += `<div class='tooltipdetails-tags'>`;
+        //     proj.tags.forEach(function(e){
+        //         content += `<span class='tagspan' style='opacity: 1'>${e}</span>`;
+        //     });
+        //     content += `</div>`;
+        //     content += `<div class='flexrow'>`;
+        //     content += `<div class='tooltipdetails-desc'>${proj.desc}</div>`;
+
+        //     if (proj.bigimg)
+        //     {
+        //         content += `<div><img class='tooltipdetails-img' src='img/project-big-screenshots/${proj.bigimg}' /><br />`;
+        //         if (proj.bigimg2) content += `<img class='tooltipdetails-img' src='img/project-big-screenshots/${proj.bigimg2}' />`;
+        //         content += `</div>`;
+        //     }
+        //     else
+        //     {
+        //         content += `<div><img class='tooltipdetails-img' src='img/project-big-screenshots/missing.jpg' /></div>`;
+        //     }
+        //     content += `</div>`;
+
+        //     bigtexttooltipbox.innerHTML = content;
+        // });
     });
 
 });

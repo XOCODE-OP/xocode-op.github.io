@@ -177,3 +177,15 @@ strong.thick
 {
     font-weight: 900;
 }
+
+
+@media (max-width: 700px)
+{
+    .exp_table-entry {
+        display: block;
+    }
+
+    .exp_table-entry {
+        font-size: 12pt;
+    }
+}
