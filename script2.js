@@ -189,8 +189,9 @@ $( document ).ready(function()
 
             if (proj.bigimg)
             {
-                content += `<div style='text-align: center;'><img class='tooltipdetails-img' src='img/project-big-screenshots/${proj.bigimg}' /><br />`;
-                if (proj.bigimg2) content += `<img class='tooltipdetails-img' src='img/project-big-screenshots/${proj.bigimg2}' />`;
+                content += `<div style='text-align: center;'>
+                <a href='img/project-big-screenshots/${proj.bigimg}' target='_blank'><img class='tooltipdetails-img' src='img/project-big-screenshots/${proj.bigimg}' /></a><br />`;
+                if (proj.bigimg2) content += `<a href='img/project-big-screenshots/${proj.bigimg2}' target='_blank'><img class='tooltipdetails-img' src='img/project-big-screenshots/${proj.bigimg2}' /></a>`;
                 content += `</div>`;
             }
             else
@@ -202,7 +203,22 @@ $( document ).ready(function()
             div.innerHTML = content;
 
             e.after(div);
+
+            setTimeout(() => {
+                const contentPage = document.querySelector(".content-page[data-pageid="+currentPage+"]");
+                console.log("before", contentPage.scrollTop );
+                contentPage.scrollTo(0, e.offsetTop);    
+                console.log("after", contentPage.scrollTop , e.offsetTop);
+            }, 20);
+            
         });
+
+        e.addEventListener("mousedown", function( event )
+        {
+            const contentPage = document.querySelector(".content-page[data-pageid="+currentPage+"]");
+            console.log("before", contentPage.scrollTop );
+        });
+
         // e.addEventListener("mouseenter", function( event )
         // {
         //     const proj = projects[e.dataset.projectid];

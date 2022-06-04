@@ -7,6 +7,9 @@
   margin: 0;
 }
 
+/* html { height: 100%; overflow:auto; }
+body { height: 100%; } */
+
 html,
 body
 {
@@ -457,6 +460,7 @@ a, a:visited{
     font-size: 20px;
     padding: 10px;
     background-color: #222;
+    max-width: 680px;
 }
 
 .tooltipdetails-tags
@@ -474,7 +478,6 @@ a, a:visited{
 {
     width: 400px;
     margin-left: 5px;
-    margin-bottom: 5px;
     max-width: 100%;
 }
 
@@ -485,7 +488,7 @@ a, a:visited{
     color: #DDD;
     padding: 20px;
     font-size: 16px;
-    max-width: 1000px;
+    max-width: 1100px;
 }
 
 .flexrow
