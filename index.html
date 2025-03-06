@@ -1,101 +1,505 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#000000">
-
-    <title>Portfolio of Patrik Schulze - CTO. Senior Software Engineer</title>
-    <meta name="description" 
-    content="Portfolio of Patrik Schulze. CTO. Senior Software Engineer. Skills. Projects. Experience.">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrik Schulze : Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="glightbox.min.css" />
+    <script src="./glightbox.min.js"></script>
+
     <style>
+        /*darkmode colors */
         body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #FFF;
-            overflow-x: hidden;
-        }
-        
-        body {
-            --sb-track-color: #cecece;
-            --sb-thumb-color: #383838;
-            --sb-size: 10px;
+            font-family: "Exo 2", sans-serif;
+            background-color: #1a1a1a;
+            color: #ddd;
         }
 
-        body::-webkit-scrollbar {
-            width: var(--sb-size)
-        }
-
-        body::-webkit-scrollbar-track {
-            background: var(--sb-track-color);
-        }
-
-        body::-webkit-scrollbar-thumb {
-            background: var(--sb-thumb-color);
-        }
-
-        @supports not selector(::-webkit-scrollbar) {
-            body {
-                scrollbar-color: var(--sb-thumb-color)
-                                var(--sb-track-color);
-            }
-        }
-
-        a {
-            text-decoration: none;
-            border: none;
-        }
-
-        a:hover {
-            text-decoration: none;
-            border: none;
-        }
-
-        .container {
-            min-height: 100vh;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            flex-direction: column;
-            overflow-x: hidden;
-        }
-
-        .resume_page
+        h1
         {
-            max-width: 793px;
-            width: 793px;
-            aspect-ratio: 0.79/1;
-            background-repeat: no-repeat;
-            background-size: 100% auto;
-            background-position: center;
-            /* image-rendering: crisp-edges; */
+            font-size: 42px;
+            margin: 0;
+            margin-top: 1em;
         }
 
-        @media (max-width: 800px) {
-            .resume_page
-            {
-                max-width: 100vw;
-                width: 100vw;
-                aspect-ratio: 0.79/1;
-            }
+        h4
+        {
+            font-size: 16px;
+            margin: 0 auto;
         }
+
+        h4 a
+        {
+            font-weight: 300;
+            color: #ddd;
+        }
+
+        h4 a:hover
+        {
+            color: #ff0;
+        }
+
+        h4 a:visited
+        {
+            color: #ddd;
+        }
+
+        .maingrid
+        {
+            display: block;
+            grid-template-columns: 1fr 1fr;
+            gap: 3em;
+            margin: 2em;
+            place-items: center; 
+
+            max-width: 900px;
+
+        }
+
+        .entry{
+            text-align: left;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 3em;
+            width: 100%;
+
+            padding-bottom: 2em;
+            border-bottom: 1px solid #333;
+        }
+
+        .entry h2
+        {
+            font-size: 24px;
+            padding: 1em 1.2em;
+            background-color: black;
+            margin: 0;
+        }
+
+        .entry p
+        {
+            padding: 1em 1.2em;
+            background-color: #141414;
+            margin: 0;
+        }
+
+        .media
+        {
+            width: 100%;
+            height: auto;
+            display: grid;
+            place-items: center;
+        }
+
+        .media a
+        {
+            width: 100%;
+            height: auto;
+        }
+
     </style>
+    
 </head>
 <body>
 
-    <a class="container" href="./RESUME_2024.pdf" target="_blank"> 
-        <img class="resume_page" src='./RESUME_2024_1.png' />
-        <img class="resume_page" src='./RESUME_2024_2.png' />
-    </a>
+    <div style="display: grid; place-items: center;">
+        <h1>Patrik Schulze : Games</h1>
+        <h4><a href='mailto:pschulzex@protonmail.com'>pschulzex@protonmail.com</a></h4>
+        <div class="maingrid" >
+
+            <div class="entry">
+                <h2>MOONLASH</h2>
+                <p>
+                    🔵 Unity 3D<br /><br />
+                    Moonlash
+                </p>
+                <div class="media">
+                    <a href="./videos/moonlash.mp4" class="glightbox2">
+                        <img src="./videos/moonlash.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>QN, 2011-2015</h2>
+                <p>
+                    🔵 Java, OpenGL, LWJGL<br /><br />
+                    The codebase of this spanned almost 10 years.<br />
+                    Huge project. Aim was to makea 2D indie sidescroller, action like Metroid but with RPG elements. <br />
+                    Story was written, locations were defined and designed, most characters were finished.<br />
+                    Code that I wrote in Essence 2007 and Black Clouds 2008 eventually became Quantum Nucleus. <br />
+                    Now of course this was multiple complete rewrites moving from Java2D to OpenGL and then to newer bindings with shaders and and such.
+                    Uses the same bindings as Minecraft LWJGL for Java OpenGL.<br /><br />
+                    Ultimately this project died due to scope. Especially making spirtes and animations, that looked good, was a herculean task.
+                </p>
+                <div class="media">
+                    <a href="./videos/qn.mp4" class="glightbox2">
+                        <img src="./videos/qn.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Quantum Nucleus Art, 2013</h2>
+                <p>
+                    🔵 Java, OpenGL, LWJGL<br /><br />
+                    A trailer we made for Quantum Nucleus, showing a lot of the concept art and some animations.
+                </p>
+                <div class="media">
+                    <a href="./videos/qn_artmusic.mp4" class="glightbox2">
+                        <img src="./videos/qn_artmusic.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Alkahest, 2013</h2>
+                <p>
+                    🔵 Java, OpenGL, LWJGL<br /><br />
+                    While working on Quantum Nucleus, a better and better map editor was needed. <br />
+                    Eventually we wanted to add lights which can be seen in real time, light baking and such, in addition to all the functionality the previous map editor I made already had,<br />
+                    like placing enemies, multiple layers in the tile map, parallax layers, AI scripts and node, item placemens, zones for AI or map loading and more.<br />
+                    So eventually I created a new codebase, using an existing UI system, before I made the entire UI by hand and it became a hassle. <br />
+                    LibGDX UI<br />
+                    Uses the same bindings as Minecraft LWJGL for Java OpenGL.<br />
+                </p>
+                <div class="media">
+                    <a href="./videos/alkahest.mp4" class="glightbox2">
+                        <img src="./videos/alkahest.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Card game 3D, 2019</h2>
+                <p>
+                    🔵 Unity 3D<br /><br />
+                    Inspired by Yugioh Forbidden Memories on PS1, this was a prototype for a 3D unity card game.<br />
+                    The intent was to make an unofficial sequel not using the Yugioh IP.<br />
+                    Unfinished prototype.
+                </p>
+                <div class="media">
+                    <a href="./videos/fm.mp4" class="glightbox2">
+                        <img src="./videos/fm.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Medical Tradeshow Game, 2017</h2>
+                <p>
+                    🔵 Unity 3D<br /><br />
+                    I had contacts with the medical industry due to a prior job. <br />
+                    Those people eventually asked me for a freelance job to do a tradeshow game to promote, in a fun game way, their new robot.<br />
+                    They asked it to play like Pac-Man.
+                </p>
+                <div class="media">
+                    <a href="./videos/medrorobotics.mp4" class="glightbox2">
+                        <img src="./videos/medrorobotics.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Puzzle Mystery Game, VR, 2017</h2>
+                <p>
+                    🔵 Unity 3D, VR<br /><br />
+                    This is a very short game, but finished. <br />
+                    Inspired by Portal 2 in setting and scenario. Players questions narrative and solves puzzles. <br />
+                    Was made with VR in mind.
+                </p>
+                <div class="media">
+                    <a href="./videos/thesis.mp4" class="glightbox2">
+                        <img src="./videos/thesis.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>MGS in Unity, 2016</h2>
+                <p>
+                    🔵 Unity 3D<br /><br />
+                    I was wanted to see if I could change a room from Metal Gear Solid into a moden Unity 3D environment.<br />
+                    Very basic test, but it was nice to see the result.
+                </p>
+                <div class="media">
+                    <a href="./videos/mgs.mp4" class="glightbox2">
+                        <img src="./videos/mgs.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>2D Physics, 2013</h2>
+                <p>
+                    🔵 Java<br /><br />
+                    When working on Quantun Nucleus, lots of physics was needed. <br />
+                    I made a 2D physics engine, with collision detection, slope mechanics, jumping, bouncing, being carried by platforms and such.
+                </p>
+                <div class="media">
+                    <a href="./videos/physics.mp4" class="glightbox2">
+                        <img src="./videos/physics.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Phaser web game, 2012</h2>
+                <p>
+                    🔵 Phaser, Javascript<br /><br />
+                    Prototype I made with Phaser, in fact I made a couple of prototypes but this one if a fine showcase. <br />
+                    Learned how to use shaders and 3D effects as well as all the basics of Phaser and 2D game programming.<br />
+                    Audio as well, input and font system.
+                </p>
+                <div class="media">
+                    <a href="./videos/phaser.mp4" class="glightbox2">
+                        <img src="./videos/phaser.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Previous Map Editor, 2012</h2>
+                <p>
+                    🔵 Java, OpenGL, LWJGL<br /><br />
+                    Working on Quantum Nucleus, a map editor was needed to built the maps. <br />
+                    Here you can place enemies, multiple layers in the tile map, parallax layers, AI scripts and node, item placemens, zones for AI or map loading.
+                    Uses the same bindings as Minecraft LWJGL for Java OpenGL.<br />
+                </p>
+                <div class="media">
+                    <a href="./videos/old_mapeditor.mp4" class="glightbox2">
+                        <img src="./videos/old_mapeditor.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Visual Novel RPG, 2015</h2>
+                <p>
+                    🔵 Unity 3D<br /><br />
+                    Inspired by Shin Megami Tensei SMT games.<br />
+                    Walk around in a grid system, interact with the environment in a visual novel style.<br />
+                    Just a prototype.
+                </p>
+                <div class="media">
+                    <a href="./videos/smt.mp4" class="glightbox2">
+                        <img src="./videos/smt.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Black Clouds, 2008</h2>
+                <p>
+                    🔵 Java 2D<br /><br />
+                    First attempt at making a JRPG. <br />
+                    Player can walk around in a Final Fantasy style, tile map, with walls and portals aka doors to load other maps.<br />
+                    Certain areas will trigger battles.<br />
+                    Battle Combat system in style of old Final Fantasy games. <br />
+                    Java with 2D OpenGL graphics in 2008. Prototype.
+                </p>
+                <div class="media">
+                    <a href="./videos/black_clouds.mp4" class="glightbox2">
+                        <img src="./videos/black_clouds.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Demake Ninja, 2016</h2>
+                <p>
+                    🔵 Unity 3D<br /><br />
+                    Low Poly video game made for a game jam. <br />
+                    Made to emulate Tenchu type ninja feel, walk around explore feudal japan style in low poly, flowing water, snow, moon light, throw shuriken.
+                </p>
+                <div class="media">
+                    <a href="./videos/demake_ninja.mp4" class="glightbox2">
+                        <img src="./videos/demake_ninja.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>SKIRMISH, 2012</h2>
+                <p>
+                    🔵 Java, OpenGL<br /><br />
+                    Small turn based action tactics game.<br />
+                    2 teams take turns moving and attacking opposing units in various landscapes.<br />
+                    Uses the same bindings as Minecraft LWJGL for Java OpenGL.<br />
+                    Ported to Android as well using LibGDX.<br />
+                </p>
+                <div class="media">
+                    <a href="./videos/skirmish.mp4" class="glightbox2">
+                        <img src="./videos/skirmish.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Black Nebula, 2011</h2>
+                <p>
+                    🔵 Java, OpenGL<br /><br />
+                    Small action twin stick type shooter.<br />
+                    Inspired by twin stick shooters and Sinistar and space exploration games.<br />
+                    Multiple enemy types, weapons, bombs, point systems, boosts, pickup, and powerups.<br />
+                    Sinistar type boss, particle effects, etc.<br />
+                    Uses the same bindings as Minecraft LWJGL for Java OpenGL.<br />
+                    Ported to Android as well using LibGDX.<br />
+                </p>
+                <div class="media">
+                    <a href="./videos/black_nebula.mp4" class="glightbox2">
+                        <img src="./videos/black_nebula.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Essence, 2007</h2>
+                <p>
+                    🔵 Java<br /><br />
+                    Early try of mine to make an RTS, had a full menu and UI and a bunch of units, shield and health bars, and a minimap.<br />
+                    Units could attack and such, and I made my first map editor. Using tiles.<br />
+                    Java with 2D OpenGL graphics in 2007. Prototype.
+                </p>
+                <div class="media">
+                    <a href="./videos/essence.mp4" class="glightbox2">
+                        <img src="./videos/essence.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Stella, 2012</h2>
+                <p>
+                    🔵 Java, OpenGL<br /><br />
+                    Casual cute puzzle game<br />
+                    Move a flock of stars to the goal without killing them on the way, avoid obstacles, strategize route and actions.<br />
+                    Uses the same bindings as Minecraft LWJGL for Java OpenGL.<br />
+                    Ported to Android as well using LibGDX.<br />
+                </p>
+                <div class="media">
+                    <a href="./videos/stella.mp4" class="glightbox2">
+                        <img src="./videos/stella.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Dragon Matching Mobile Game Template, 2019</h2>
+                <p>
+                    🔵 Unity 3D, 2D Game<br /><br />
+                    For a project, there was a need for a series of Unity Game Templates. <br />
+                    This one was inspired by Puzzles & Dragons, match gems and use the power to damage the enemy and proceed.
+                </p>
+                <div class="media">
+                    <a href="./videos/template_dragon_gems.mp4" class="glightbox2">
+                        <img src="./videos/template_dragon_gems.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Visual Novel Template, 2020</h2>
+                <p>
+                    🔵 Unity 3D, 2D Game<br /><br />
+                    For a project, there was a need for a series of Unity Game Templates. <br />
+                    This was a visual novel template with easy to use functions to create a visual novel, all the mechanics needed to create a VN flow, including screen effects and such.
+                </p>
+                <div class="media">
+                    <a href="./videos/template_vn.mp4" class="glightbox2">
+                        <img src="./videos/template_vn.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Space Shooter SHMUP Template, 2019</h2>
+                <p>
+                    🔵 Unity 3D, 2D Game<br /><br />
+                    For a project, there was a need for a series of Unity Game Templates. <br />
+                    This one was a SHMUP game with various enemies.
+                </p>
+                <div class="media">
+                    <a href="./videos/template_space_shooter.mp4" class="glightbox2">
+                        <img src="./videos/template_space_shooter.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Puzzle Block Game Template, 2019</h2>
+                <p>
+                    🔵 Unity 3D, 2D Game<br /><br />
+                    For a project, there was a need for a series of Unity Game Templates. <br />
+                    This one was inspired by one of those block arranging games where you just fill the screen.
+                </p>
+                <div class="media">
+                    <a href="./videos/template_puzzle_blocks.mp4" class="glightbox2">
+                        <img src="./videos/template_puzzle_blocks.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Match 3 Gems Mobile Game Template, 2019</h2>
+                <p>
+                    🔵 Unity 3D, 2D Game<br /><br />
+                    For a project, there was a need for a series of Unity Game Templates. <br />
+                    This one was a basic match 3 gems game, like Candy Crush or Bejeweled.
+                </p>
+                <div class="media">
+                    <a href="./videos/template_match3.mp4" class="glightbox2">
+                        <img src="./videos/template_match3.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Flappy Game Template, 2019</h2>
+                <p>
+                    🔵 Unity 3D, 2D Game<br /><br />
+                    For a project, there was a need for a series of Unity Game Templates. <br />
+                    This one was inspired by Flappy Bird, tap to fly and avoid obstacles.
+                </p>
+                <div class="media">
+                    <a href="./videos/template_flappy.mp4" class="glightbox2">
+                        <img src="./videos/template_flappy.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="entry">
+                <h2>Flocking Boids, 2009</h2>
+                <p>
+                    🔵 Java2D<br /><br />
+                    Simulation application which simulates the flocking behavior of birds.<br />
+                    Uses the Boids algorithm to simulate the flocking behavior of birds.<br />
+                    Birds are attracted to each other and repelled by each other, and they try to match the velocity of their neighbors.<br />
+                    It uses the 3 rules of separation, alignment, and cohesion.<br />
+                </p>
+                <div class="media">
+                    <a href="./videos/boids.mp4" class="glightbox2">
+                        <img src="./videos/boids.jpg" alt="image" style="width: 100%; height: auto;" />
+                    </a>
+                </div>
+            </div>
+            
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const lightbox = GLightbox({
+            selector: '.glightbox2',
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true});
+
+    </script>
+
 
 </body>
 </html>
